@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.python-version
+
+# Tooling / IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# ML / data artifacts
+*.joblib
+*.pkl
+.ipynb_checkpoints/
+data/raw/
+mlruns/
+
+# Docker
+.docker/
+/START.md

@@ -1,0 +1,16 @@
+services:
+  python:
+    build: .
+    container_name: ai-engineering-python
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    # Keep the container alive for interactive work (claude/cursor + shell)
+    command: sleep infinity
+    stdin_open: true
+    tty: true

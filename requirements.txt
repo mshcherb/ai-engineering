@@ -1,0 +1,14 @@
+# Web / API (course block 2 + mini-task)
+fastapi[standard]>=0.115.0
+pydantic>=2.0
+uvicorn[standard]>=0.30.0
+
+# ML (course block 3 + mini-task)
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+joblib>=1.4
+
+# Notebooks / exploration (optional but handy)
+jupyterlab>=4.2
+ipykernel>=6.29
