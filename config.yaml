@@ -1,0 +1,30 @@
+# Extraction run settings. Secrets live in .env, never here.
+
+data_path: data/texts.jsonl
+results_dir: results
+prompt_version: v1
+
+# Network safety: per-request timeout and retries with exponential backoff
+timeout_s: 60
+max_retries: 3
+backoff_base_s: 2
+
+providers:
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+  ollama:
+    base_url_env: OLLAMA_BASE_URL          # set in docker-compose
+    base_url: http://localhost:11434/v1    # fallback outside docker
+    api_key: ollama                        # Ollama ignores it, SDK requires one
+
+# Which model to run by default (`make run`), plus sampling params.
+# More models/configs are compared in step 2.
+default_run: gpt4o_mini_t0
+
+runs:
+  gpt4o_mini_t0:
+    provider: openrouter
+    model: openai/gpt-4o-mini
+    temperature: 0.0
+    top_p: 1.0
