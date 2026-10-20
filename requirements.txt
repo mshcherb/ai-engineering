@@ -3,6 +3,10 @@ fastapi[standard]>=0.115.0
 pydantic>=2.0
 uvicorn[standard]>=0.30.0
 
+# LLM integration (class 3): OpenAI-compatible SDK for OpenRouter / Ollama
+openai>=1.50
+python-dotenv>=1.0
+
 # ML (course block 3 + mini-task)
 numpy>=1.26
 pandas>=2.2

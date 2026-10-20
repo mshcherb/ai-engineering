@@ -10,7 +10,23 @@ services:
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
+      - OLLAMA_BASE_URL=http://ollama:11434/v1
+    depends_on:
+      - ollama
     # Keep the container alive for interactive work (claude/cursor + shell)
     command: sleep infinity
     stdin_open: true
     tty: true
+
+  # Local LLM server (course block 3), OpenAI-compatible API on :11434/v1
+  ollama:
+    image: ollama/ollama:0.12.6
+    container_name: ai-engineering-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-models:
