@@ -45,7 +45,8 @@ config.yaml           моделі, temperature / top_p, timeout, retries
 prompts/              версії промптів + CHANGELOG.md
 data/texts.jsonl      49 знеособлених текстів (Telegram + Reddit)
 data/golden.json      15 текстів, розмічених вручну (правила — data/LABELING.md)
-results/              виходи моделей
+results/              виходи моделей, metrics.md (таблиця), errors.md (розбіжності)
+REPORT.md             звіт-порівняння і вибір моделі
 scripts/              збірка датасету, перевірка середовища
 ```
 

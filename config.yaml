@@ -2,7 +2,7 @@
 
 data_path: data/texts.jsonl
 results_dir: results
-prompt_version: v1
+prompt_version: v3          # chosen in REPORT.md; override with --prompt
 
 # Network safety: per-request timeout and retries with exponential backoff
 timeout_s: 60
