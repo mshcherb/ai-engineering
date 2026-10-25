@@ -32,6 +32,7 @@ class Language(str, Enum):
     ru = "ru"
     en = "en"
     mixed = "mixed"
+    unknown = "unknown"   # no words to judge by (emoji only)
 
 
 # extra="forbid" -> additionalProperties: false, required by strict JSON schema mode

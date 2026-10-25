@@ -1,0 +1,453 @@
+[
+  {
+    "id": "t001",
+    "source": "telegram/ch1",
+    "text": "Началось - банки стартанули с отчетами) \n\n📈️️️️️️$GS\n\nQ3 GAAP EPS of $17.01 beats by $3.92.\nRevenue of $18.68B (+23.1% Y/Y) beats by $1.79B.\n\n📉️️️️️️$JPM\n\nQ3 Non-GAAP EPS of $5.75 misses by $0.19.\nRevenue of $50.9B (+8.1% Y/Y) misses by $320M.\n\n📈️️️️️️$C\n\nQ3 GAAP EPS of $2.85 beats by $0.20.\nRevenue of $23.8B (+7.7% Y/Y) beats by $80M.\n\n🤔$WFC\n\nQ3 GAAP EPS of $1.87 beats by $0.01.\nRevenue of $21.87B (+2.0% Y/Y) misses by $450M.\n\n$BAC словил штраф в $1.2B от U.S. Department of the Treasury за anti-money laundering и sanctions laws violations. Помогал «неосознанно» обходить санкции.",
+    "label": {
+      "language": "mixed",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Goldman Sachs",
+          "ticker": "GS",
+          "asset_type": "stock",
+          "sentiment": "bullish",
+          "reasoning": "EPS и Revenue больше чем ожидалось",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$GS\n\nQ3 GAAP EPS of $17.01 beats by $3.92.\nRevenue of $18.68B (+23.1% Y/Y) beats by $1.79B."
+        },
+        {
+          "company": "JPMorgan Chase",
+          "ticker": "JPM",
+          "asset_type": "stock",
+          "sentiment": "bearish",
+          "reasoning": "EPS и Revenue отстают по сравнению с ожилданиями",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$JPM\n\nQ3 Non-GAAP EPS of $5.75 misses by $0.19.\nRevenue of $50.9B (+8.1% Y/Y) misses by $320M."
+        },
+        {
+          "company": "Citigroup",
+          "ticker": "C",
+          "asset_type": "stock",
+          "sentiment": "bullish",
+          "reasoning": "EPS и Revenue незначительно выросли по сравнению с ожилданиями",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$C\n\nQ3 GAAP EPS of $2.85 beats by $0.20.\nRevenue of $23.8B (+7.7% Y/Y) beats by $80M."
+        },
+        {
+          "company": "Wells Fargo",
+          "ticker": "WFC",
+          "asset_type": "stock",
+          "sentiment": "mixed",
+          "reasoning": "EPS незначительно выросла всего на по сравнению с ожилданиями $0.01, при эжтом Revenue упало по сравнению с ожилданиями",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$WFC\n\nQ3 GAAP EPS of $1.87 beats by $0.01.\nRevenue of $21.87B (+2.0% Y/Y) misses by $450M."
+        },
+        {
+          "company": "Bank of America",
+          "ticker": "BAC",
+          "asset_type": "stock",
+          "sentiment": "bearish",
+          "reasoning": "Регулярная новость напутанна в отчеты. Главный месседж Штраф $1.2B от Минфина, слово «неосознанно» в кавычках показывает сарказм.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$BAC словил штраф в $1.2B от U.S. Department of the Treasury за anti-money laundering и sanctions laws violations. Помогал «неосознанно» обходить санкции."
+        }
+      ],
+      "summary": "Отчет показателей EPS и Revenue по 4 компаниям(GS, JPM, C, WFC) о так же затисавшаяся новость  о штрафе Bank of America из за обхода сагнкций"
+    },
+    "notes": "новость про BAC интересна и может быть привлекательной, возможно от штрафа акции чут чуть просядут и их можно будет закупить по интересной цене на средний или долгий срок. Нуждается в большем инвестигейте. «неосознанно» в кавычках подчеркивает то что мы не можем быть на 100% уверенны что это было неосознанно"
+  },
+  {
+    "id": "t003",
+    "source": "telegram/ch1",
+    "text": "🇫🇷 Во Франции идут мощные протесты + долговая спираль. \nНам всем стоит обратить внимание на этот рынок завтра по открытию. \n\nПо идее, часть активов, должны уйти в диапазон ниже IValue. \nТам есть часть компаний достаточно интересных для покупки (нет я не про $LVMH), в этот момент обычно индустриальный сектор продается с эмоциональным дисконтом. \n\nКороче, очередной «раз в жизни» событие, чтобы откупить акции Франции",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "LVMH",
+          "ticker": "MC",
+          "asset_type": "stock",
+          "sentiment": "neutral",
+          "reasoning": "Упомянут, чтобы исключить из идеи покупки",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "нет я не про $LVMH"
+        }
+      ],
+      "summary": "конкретных компаний нет, просто новость о протестах которая может повлиять на рынок"
+    },
+    "notes": "автор предлагает покупать французские акции на панике"
+  },
+  {
+    "id": "t010",
+    "source": "telegram/ch1",
+    "text": "📉️️️️️️$SWMR\nИсконно украинская компания с одним клиентом упала в цене.\n\nВнезапно Valuation снова заиграл красками! \n\nБлин не следил за стоимостью шорта…Помню когда оценивали тут, она была 100%+, пропустили изи маней…(",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Swarmer Inc",
+          "ticker": "SWMR",
+          "asset_type": "stock",
+          "sentiment": "mixed",
+          "reasoning": "Цена уже упала, автор жалеет, что не вёл шорт: при прошлой оценке потенциал был 100%+, и это были лёгкие деньги. Одновременно 'Valuation снова заиграл красками' — после просадки оценка опять выглядит привлекательно. Конкретного призыва на закуп нет",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "Исконно украинская компания с одним клиентом упала в цене.\n\nВнезапно Valuation снова заиграл красками! \n\nБлин не следил за стоимостью шорта…Помню когда оценивали тут, она была 100%+, пропустили изи маней…("
+        }
+      ],
+      "summary": "SWMR заметно подешевел. Автор упустил шорт, который при прошлой оценке давал 100%+, и отмечает, что после падения Valuation снова выглядит привлекательно."
+    },
+    "notes": "Фрвзв 'Исконно украинская компания с одним клиентом' звучит саркастично и показывает компанию как не надежную, но может быть вполне привлекательна для инвестиции на короткий срок"
+  },
+  {
+    "id": "t012",
+    "source": "telegram/ch1",
+    "text": "Эволюция аналитиков \n\nDNB Carnegie повысил целевую цену акций Evolution до 1 000 шведских крон (с 955 крон). Подтверждена рекомендация «Покупать»\n\n$EVO",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Evolution",
+          "ticker": "EVO",
+          "asset_type": "stock",
+          "sentiment": "neutral",
+          "reasoning": "DNB Carnegie поднял целевую цену с 955 до 1 000 шведских крон и подтвердил рекомендацию «Покупать». Канал передаёт эту оценку без оговорки.",
+          "price_target": 1000,
+          "horizon": "unknown",
+          "quote": "DNB Carnegie повысил целевую цену акций Evolution до 1 000 шведских крон (с 955 крон). Подтверждена рекомендация «Покупать»"
+        }
+      ],
+      "summary": "DNB Carnegie повысил целевую цену Evolution (EVO) с 955 до 1 000 шведских крон и подтвердил рекомендацию «Покупать»."
+    },
+    "notes": "DNB Carnegie тут источник оценки и поскольку их оценка перспективы цены увеличилась то это подтверждает рекомендацию «Покупать». Срок цели в посте не назван, нопоскольку подобные новоста служат позитивным сигналом для рынка и могут краткосрочно подталкивать котировки акций вверх то horizon medium."
+  },
+  {
+    "id": "t013",
+    "source": "telegram/ch1",
+    "text": "🚗 По поводу $TSLA и Roadster\n\nЕсли авто выйдет с возобновляемыми трастерами с воздуха, я как-нибудь обязательно возьму, сделаем мяч и будем рубать в Рокет Лигу на максималках!",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": false,
+      "mentions": [
+        {
+          "company": "Tesla",
+          "ticker": "TSLA",
+          "asset_type": "stock",
+          "sentiment": "neutral",
+          "reasoning": "Тикер назван, но речь о машине. «Возьму» относится к новой модели машины. Оценки акции, цели и рекомендации нет",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "По поводу $TSLA и Roadster\n\nЕсли авто выйдет с возобновляемыми трастерами с воздуха, я как-нибудь обязательно возьму, сделаем мяч и будем рубать в Рокет Лигу на максималках!"
+        }
+      ],
+      "summary": "Шутка про Tesla Roadster: если машина выйдет с воздушными трастерами, автор когда-нибудь её купит и предлагает играть в Rocket League. Позиции по акции TSLA нет."
+    },
+    "notes": "Тикер в тексте есть, поэтому упоминание сохраняется со sentiment neutral. Roadster — продукт Tesla, не отдельная компания."
+  },
+  {
+    "id": "t015",
+    "source": "telegram/ch1",
+    "text": "❗В Украине ужесточат ответственность за уклонение от мобилизации и СЗЧ, — премьер\n\nПо словам Сергея Корецкого, актуализированный законопроект уже находится в Верховной Раде. При этом подробностей он не озвучил. \n\nУНИАН в🕸Google | 👥X | 📺YouTube |🧵Threads",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": false,
+      "mentions": [],
+      "summary": "Премьер сообщил, что в Украине ужесточат ответственность за уклонение от мобилизации и СЗЧ. По словам Сергея Корецкого, законопроект уже в Верховной Раде, подробностей не названы."
+    },
+    "notes": "Упоминаний активов нет. Верховная Рада, премьер и Сергей Корецкий — политики и институт, не компании или акции. Подпись «УНИАН в Google | X | YouTube | Threads» — источник и соцсети, не упоминания компаний. СЗЧ — самовольное оставление части."
+  },
+  {
+    "id": "t017",
+    "source": "telegram/ch1",
+    "text": "Revolut RIP 🪦",
+    "label": {
+      "language": "en",
+      "is_about_stocks": false,
+      "mentions": [
+        {
+          "company": "Revolut",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "bearish",
+          "reasoning": "Весь пост — эпитафия: RIP и надгробие. Тикера, цены, цели и рекомендации по бумаге нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "Revolut RIP 🪦"
+        }
+      ],
+      "summary": "Короткий вердикт по которому не возможно дать какую то оценку"
+    },
+    "notes": "Из текста новость про Revolut невозможено оценить валидно, поскольку к новости была приложенна еще картинка которой нет для анализа то тут выглядит это негативно, но из приложенной картинки видно что это всеголишь 404 ответ от революта, так что новость о перебоях вв работе, поэтому таки новости не рассматривать вообще что бы не додумывать то чего нет"
+  },
+  {
+    "id": "t019",
+    "source": "telegram/ch1",
+    "text": "Главный риск таких диверсифицированных фондов, не столько «риск экономики обьекта», сколько старый добрый «bank run» - денег априори на всех не хватит, при запаздывающем NAV.\n\nСледить надо, чтобы чистые заявки на выкуп относительно свободной ликвидности фонда, отдельно от новых размещений, не превышали порог возможного выкупа.\nРолловер паев редко покрывает запрос, когда рынок падает.",
+    "label": {
+      "language": "ru",
+      "is_about_stocks": true,
+      "mentions": [],
+      "summary": "У диверсифицированных фондов главный риск это bank run при запаздывающем NAV: свободной ликвидности может не хватить на выкупы и падающем рынке надеяться на приток новых инвесторов (ролловер паев) нельзя."
+    },
+    "notes": "Имя фонда в посте отсутствует, тикер не выдумывать."
+  },
+  {
+    "id": "t020",
+    "source": "telegram/ch1",
+    "text": "Добре, але є питання в такому випадку - якщо порівнювати з акціями, то фіксувати збиток зазвичай програшна стратегія, чому тоді тут фіксувати збиток по нерухомості (виходити зараз) - виграшна стратегія? Я розумію, що порівняння американського фондового ринку і української нерухомості погане з точки зору ризику , але все ж таки десь існує позитивний сценарій , щоб вийти в плюсі, або в нулі?",
+    "label": {
+      "language": "uk",
+      "is_about_stocks": true,
+      "mentions": [],
+      "summary": "Автор сомневается и задает вопрос, что по украинской недвижимости стоит выходить сейчас и фиксировать убыток: по акциям такая тактика обычно проигрышна. Ищет сценарий выхода."
+    },
+    "notes": "Автор ссылаются на прошлый контекст о котором конктетно в этом сообщении мы не знаем, автор не является экспертом поэтому задает вопрос, новость не является полезной."
+  },
+  {
+    "id": "t025",
+    "source": "telegram/ch1",
+    "text": "🐸🐸🐸",
+    "label": {
+      "language": "unknown",
+      "is_about_stocks": false,
+      "mentions": [],
+      "summary": "Сообщение состоит из трёх эмодзи лягушки. Текста, тикера и инвестиционного содержания нет."
+    },
+    "notes": "language пустой: слов в посте нет. Упоминание не создавать."
+  },
+  {
+    "id": "t029",
+    "source": "reddit/r/stocks",
+    "text": "Bullish on ASTS. Bearish on Management.\n\nWe haven't heard from ASTS leadership since August 10. At that time they said they believed there would be 1 launch every 1 to 2 months. They said they should be able to get critical 45 satellites into orbit by end of Q1 2027, pushing the timeline back from end of 2026 by 3 months. That was coming off the heals of an August 5 launch. Here we are 2 and a half months later and there's been nothing but crickets.\n\nIn that period of time, SpaceX has launched 26 next gen satellites in one launch. It averaged 265 starlink satellites to orbit per month for the first 6 months on 2026.\n\nOn September 14 there was a class action lawsuit filed against ASTS alleging management misled investors.\n\nIn order for ASTS to keep their Q1 target they would reasonably need 4 more launches by the end of the year. Given that there has been no launches since August 5, no announcements or communication with investors since August 10, we can probably assume that isnt going to happen.\n\nWhere I think we're at: Its reasonable to believe that the technology works, the MNO relationships are not falling apart, that the revenue case is developing. But we can't trust management's guidelines or timeframes. The stock has lost 39% of its value since the August 10 earnings call, but is still trading at 140x sales revenue. To me it says we believe long term this will work out, but not at all in the time that management says.\n\nAm I giving management too much credit, is ASTS fully cooked or do you think the stock is oversold? I'm down approx $30k on this, but other than timelines and competitor position, nothing has really changed.",
+    "label": {
+      "language": "en",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "AST SpaceMobile",
+          "ticker": "ASTS",
+          "asset_type": "stock",
+          "sentiment": "mixed",
+          "reasoning": "Автор прямо делит оценку: по компании и технологии он бычий, по менеджменту медвежий. Технология, контракты с MNO и выручка, по его словам, живы, и в долгую кейс должен сработать. При этом он не верит срокам: тишина с 10 августа, пусков после 5 августа нет, цель по 45 спутникам к Q1 2027, скорее всего, сорвётся, 14 сентября подан иск о введении инвесторов в заблуждение. Акция уже −39% после звонка, но всё ещё стоит 140x sales. Финальный вопрос, полностью ли история сломана или бумага перепродана, автор не закрывает.",
+          "price_target": null,
+          "horizon": "long",
+          "quote": "Where I think we're at: Its reasonable to believe that the technology works, the MNO relationships are not falling apart, that the revenue case is developing. But we can't trust management's guidelines or timeframes. The stock has lost 39% of its value since the August 10 earnings call, but is still trading at 140x sales revenue. To me it says we believe long term this will work out, but not at all in the time that management says."
+        },
+        {
+          "company": "SpaceX",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "SpaceX приведена как ориентир по темпу запусков: 26 спутников за один пуск и в среднем 265 спутников Starlink в месяц за первые 6 месяцев 2026. Ставки по акции SpaceX нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "In that period of time, SpaceX has launched 26 next gen satellites in one launch. It averaged 265 starlink satellites to orbit per month for the first 6 months on 2026."
+        }
+      ],
+      "summary": "Автор в долгую верит в технологию и выручку ASTS, но не верит срокам менеджмента: пусков и связи с инвесторами нет, цель на Q1 2027 выглядит сорванной, против компании подан иск. Акция −39% с отчёта 10 августа и всё ещё на 140x sales. SpaceX упомянута только как сравнение по запускам."
+    },
+    "notes": "Менеджмент не отдельное упоминание: «Bearish on Management» сидит в sentiment ASTS. Starlink — группировка SpaceX, не второй тикер. MNO в тексте не названы, операторов не добавлять. 140x sales, −39% и −$30k(потеря автора) не являются price_target. horizon long взят из «long term this will work out»; Q1 2027 и конец 2026 — сроки менеджмента, которым автор не верит. SpaceX с июня 2026 торгуется как SPCX, но этого символа в посте нет, поэтому ticker null."
+  },
+  {
+    "id": "t035",
+    "source": "reddit/r/stocks",
+    "text": "Apple is pretty overpriced right now\n\nLook at this:\n\nI know Apple has become a safe haven against AI akin to Walmart or Coca Cola, but the valuation is nasty right now. At 342 dollars per share;\n\nA PE of 39 and a forward PE of 37 does not reflect their 8% EPS growth. It's not a growth company.\n\nThe massive upgrade cycle from the iPhone 17 - it was really popular. It pulled forward demand, now fewer consumers will be looking to buy a new phone anytime soon since they have the 17.\n\nSkyrocketing AI chip demand has sent memory prices soaring. Apple's gross margin suffers, down from over 49% to 46.5%. This made them raise prices:\n\nA $100 price hike on the iPhone 18 Pro to offset those memory costs backfired, forcing Apple to slash production orders by up to 20%. <URL>\n\nDelaying the cheaper, standard iPhone 18 until next spring leaves a huge hole in the lineup for the critical holiday shopping season.\n\nPlua they're going to be stuck renting compute in the future if AI pans out.",
+    "label": {
+      "language": "en",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Apple",
+          "ticker": "AAPL",
+          "asset_type": "stock",
+          "sentiment": "bearish",
+          "reasoning": "Прямой тезис: акция переоценена, оценка «nasty». PE 39 и forward PE 37 не соответствуют росту EPS на 8%, это не growth-компания. Цикл iPhone 17 вытянул спрос вперёд, маржа сжалась с 49% до 46.5%, повышение цены iPhone 18 Pro на $100 обернулось сокращением заказов до 20%, а обычный iPhone 18 сдвинут на весну и оставляет дыру в сезоне праздничных распродаж. Отдельно: если AI случится, Apple будет арендовать вычислительные мощности.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "I know Apple has become a safe haven against AI akin to Walmart or Coca Cola, but the valuation is nasty right now. At 342 dollars per share;"
+        }
+      ],
+      "summary": "Apple, по автору, сейчас переоценена: при цене 342 доллара PE около 37–39 не стыкуется с ростом EPS на 8%. Спрос после iPhone 17 вытянут вперёд, маржа падает из-за повышений цен на память, повышение цены iPhone 18 Pro ударило по заказам, а более дешёвая модель задержана до весны."
+    },
+    "notes": "342 доллара — названная текущая цена, не price_target. $100 — наценка на iPhone 18 Pro, не цель по акции. PE, маржа и −20% к заказам в price_target не переносятся. Walmart и Coca-Cola — сравнение для роли safe haven, отдельных упоминаний нет. iPhone 17 и iPhone 18 — продукты. «Next spring» и holiday season — календарь линейки, не horizon автора."
+  },
+  {
+    "id": "t040",
+    "source": "reddit/r/stocks",
+    "text": "Anthropic reports $16.8B in 3Q26, up 50% QoQ, $SMH -2% AH, MoM calculation in Post\n\nSource: <URL>\n\nFinancial Times reports that Anthropic told investors it made $16.8B in 3Q26, up 50% from $11.5B in 2Q26, and was profitable on an \"adjusted\" basis. This marks a severe deceleration from 2Q26's Ant's reported 147% 2Q26 QoQ growth.\n\nAverage monthly growth implied by quarters in 2Q: ~35%\n\nAverage monthly growth implied by quarters in 3Q: 13.1%\n\nIf we assume linear growth for Aug/Sep if July's revenue was $5.4B (based on a $65B rev run rate at the end of July), this would mark 3.3% MoM growth for Aug/Sep, giving us an exist September run rate of ~$70B ARR.\n\nIn order for Anthropic to hit its goal of $100B ARR by December, it would need growth to re-accelerate to 12.9% MoM for the next 3 months.\n\nIn addition, Anthropic appears to be targetting a valuation above $2T, which is about 29.8x 3Q26 annualized revenue. This is ahead of at least $518B of compute commitments over the next decade, about $51.8B a year, or 77% of its current annualized revenue. In addition, \"Adjusted\" profitability has not been defined publicly, but it'll be easier to understand once Anthropic publicly releases their S-1",
+    "label": {
+      "language": "en",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Anthropic",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "bearish",
+          "reasoning": "Выручка $16.8B и +50% кв/кв — цифра компании. Оценка автора другая: это severe deceleration после 147% во 2Q26, месячный темп падает с ~35% к 13.1%, а при его допущении по июлю — до 3.3% в августе–сентябре. Цель $100B ARR к декабрю требует разгона обратно до 12.9% в месяц. Оценка выше $2T — это 29.8x годовой выручки на фоне $518B обязательств по compute, около 77% текущей годовой выручки. «Adjusted» прибыль публично не определена.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "This marks a severe deceleration from 2Q26's Ant's reported 147% 2Q26 QoQ growth."
+        },
+        {
+          "company": "VanEck Semiconductor ETF",
+          "ticker": "SMH",
+          "asset_type": "etf",
+          "sentiment": "neutral",
+          "reasoning": "В заголовке зафиксировано движение $SMH −2% after hours рядом с отчётом Anthropic. В тексте нет рекомендации покупать или продавать фонд.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "Anthropic reports $16.8B in 3Q26, up 50% QoQ, $SMH -2% AH, MoM calculation in Post"
+        }
+      ],
+      "summary": "Anthropic отчиталась о $16.8B выручки в 3Q26, +50% кв/кв, но автор считает это резким замедлением и показывает, что цель $100B ARR к декабрю требует возврата к росту около 13% в месяц. Искомая оценка выше $2T приходится на крупные обязательства по compute. SMH в заголовке −2% after hours, без отдельной ставки."
+    },
+    "notes": "Anthropic на 25 октября 2026 не публичная: публичного S-1 и тикера нет, служебные символы вроде ANTH.PVT не подставлять. $2T — искомая оценка компании, $100B — её цель по ARR, $16.8B — выручка. Это не price_target. Декабрь и «next decade» — срок цели компании и горизонт контрактов на compute, не horizon автора. −2% по SMH — движение цены, не цель. Financial Times — источник, не упоминание."
+  },
+  {
+    "id": "t042",
+    "source": "reddit/r/stocks",
+    "text": "A robot rang the Nasdaq closing bell yesterday. The fund behind it ($BOT) is trading at a 151% premium over what it actually owns\n\nif you missed it, a wheeled robot from Dyna robotics rang the Nasdaq close on oct 13 for robostrategy ($BOT). cool photo but the fund is the more interesting part\n\n$BOT is a closed end fund that holds private robot companies. figure ai, apptronik, dyna, standard bots etc. None of them are public so this is basically the only way to get exposure.\n\nThe catch is the price vs what it actually worth:\n\n- nav (value of the holdings) was 11.32$ a share at end of july\n\n- the stock traded at around 28$ on aug 20\n\n- thats a 151% premium (mentioned in their own SEC filing)\n\nAnd because $BOT is a closed end fund, there’s no ETF-style mechanism to keep its share price close to NAV. in other words, if there's more demand, the premium can keep growing. If sentiment changes, it can unwind just as fast.\n\nThis reminds me of destiny $DXYZ earlier this year, where price went up to insane premiums just to get pre IPO exposure to SpaceX & OpenAI.\n\nI’m bullish on robotics as a long-term theme. but being bullish on an industry & paying the right price are 2 different things.\n\nCurious what you think: anyone here holding it? would you pay 2.5x nav to own figure before ipo or just wait for the ipo?",
+    "label": {
+      "language": "en",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "RoboStrategy",
+          "ticker": "BOT",
+          "asset_type": "etf",
+          "sentiment": "bearish",
+          "reasoning": "Фонд назван интересной частью истории из-за цены. NAV на конец июля $11.32, 20 августа акции около $28, премия 151% по их же SEC filing. Это закрытый фонд: премию не сжимает механизм ETF, и при смене настроения она может так же быстро схлопнуться. Вопрос «платить ли 2.5x NAV» автор не закрывает покупкой.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "The catch is the price vs what it actually worth:\n\n- nav (value of the holdings) was 11.32$ a share at end of july\n\n- the stock traded at around 28$ on aug 20\n\n- thats a 151% premium (mentioned in their own SEC filing)"
+        },
+        {
+          "company": "Figure AI",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Названа среди непубличных активов фонда и в вопросе, платить ли 2.5x NAV за доступ к Figure до IPO. Своей ставки по компании нет: это вопрос к читателям.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "would you pay 2.5x nav to own figure before ipo or just wait for the ipo?"
+        },
+        {
+          "company": "Apptronik",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Названа в перечне частных робототехнических компаний внутри BOT. Отдельной оценки нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$BOT is a closed end fund that holds private robot companies. figure ai, apptronik, dyna, standard bots etc."
+        },
+        {
+          "company": "Dyna Robotics",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Робот Dyna позвонил в колокол Nasdaq 13 октября, и компания входит в перечень активов BOT. Оценки бизнеса или сделки нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "a wheeled robot from Dyna robotics rang the Nasdaq close on oct 13 for robostrategy ($BOT)."
+        },
+        {
+          "company": "Standard Bots",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Названа в перечне частных компаний внутри BOT. Отдельной оценки нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "$BOT is a closed end fund that holds private robot companies. figure ai, apptronik, dyna, standard bots etc."
+        },
+        {
+          "company": "Destiny Tech100",
+          "ticker": "DXYZ",
+          "asset_type": "etf",
+          "sentiment": "bearish",
+          "reasoning": "Пример того же механизма ранее в этом году: цена уходила в безумную премию ради pre-IPO доступа. Это характеристика прошлой цены, не новая рекомендация на сегодня.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "This reminds me of destiny $DXYZ earlier this year, where price went up to insane premiums just to get pre IPO exposure to SpaceX & OpenAI."
+        },
+        {
+          "company": "SpaceX",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Названа как pre-IPO экспозиция, ради которой раньше платили премию в DXYZ. Своей ставки по акции SpaceX в посте нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "price went up to insane premiums just to get pre IPO exposure to SpaceX & OpenAI."
+        },
+        {
+          "company": "OpenAI",
+          "ticker": null,
+          "asset_type": "private",
+          "sentiment": "neutral",
+          "reasoning": "Названа рядом со SpaceX как вторая pre-IPO экспозиция внутри истории про DXYZ. Отдельной оценки нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "price went up to insane premiums just to get pre IPO exposure to SpaceX & OpenAI."
+        }
+      ],
+      "summary": "Закрытый фонд RoboStrategy (BOT) держит частные робототехнические компании и торгуется с премией около 151% к NAV: $11.32 против примерно $28. Автор в долгую верит в робототехнику, но отделяет это от покупки фонда по 2.5x NAV. DXYZ приведён как прошлый случай такой же премии за pre-IPO доступ к SpaceX и OpenAI."
+    },
+    "notes": "11.32$ — NAV на конец июля, около 28$ — цена 20 августа, 151% и 2.5x — размер премии. Это не price_target. horizon long только у темы robotics; к BOT он не относится. Nasdaq — площадка колокола, не упоминание. «etc.» значит, что список холдингов неполный, другие имена не добавлять. SpaceX с июня 2026 торгуется как SPCX, но пост говорит о pre-IPO экспозиции earlier this year и символ не пишет, поэтому ticker null. OpenAI на октябрь 2026 частная, тикера нет. Опечатки и регистр текста сохранены."
+  },
+  {
+    "id": "t044",
+    "source": "reddit/r/investing",
+    "text": "Best Money Market ETF or Similar for Roth IRA\n\nI lump sum my annual Roth IRA contributions, but like to DCA the investment purchases. What's the highest yielding no-risk etf for keeping the cash in the Roth IRA until it's invested in my core holdings? Please no advice on lump sum vs DCA, that is not the purpose of my post.\n\nI prefer ETFs over mutual funds because I want to sell and buy immediately, rather than waiting for a mutual fund to execute at end of day.\n\nI'm seeing BOXX at ~4% yield, but ironically the tax benefits are lost because it's a Roth account. Anything higher than 4% with no downside risk?\n\nDoes JPST or NEAR have too much risk?",
+    "label": {
+      "language": "en",
+      "is_about_stocks": true,
+      "mentions": [
+        {
+          "company": "Alpha Architect 1-3 Month Box ETF",
+          "ticker": "BOXX",
+          "asset_type": "etf",
+          "sentiment": "neutral",
+          "reasoning": "Автор видит доходность около 4% и отмечает, что налоговая выгода BOXX в Roth не нужна о какой стране идет речь не знаем. Это кандидат для парковки кэша и точка сравнения. Покупки или отказа от фонда нет: он спрашивает, есть ли выше 4% без риска снижения.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "I'm seeing BOXX at ~4% yield, but ironically the tax benefits are lost because it's a Roth account."
+        },
+        {
+          "company": "JPMorgan Ultra-Short Income ETF",
+          "ticker": "JPST",
+          "asset_type": "etf",
+          "sentiment": "neutral",
+          "reasoning": "Тикер стоит внутри вопроса, не слишком ли велик риск. Утверждения, что риск избыточен или что фонд подходит, нет.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "Does JPST or NEAR have too much risk?"
+        },
+        {
+          "company": "iShares Short Duration Bond Active ETF",
+          "ticker": "NEAR",
+          "asset_type": "etf",
+          "sentiment": "neutral",
+          "reasoning": "Тот же вопрос, что и по JPST: автор спрашивает про риск и не даёт оценки.",
+          "price_target": null,
+          "horizon": "unknown",
+          "quote": "Does JPST or NEAR have too much risk?"
+        }
+      ],
+      "summary": "Автор ищет самый доходный безрисковый ETF, чтобы подержать кэш в Roth IRA до покупок в основные позиции. BOXX он видит около 4%, но налоговая особенность в Roth бесполезна. Про JPST и NEAR спрашивает, не слишком ли они рискованные."
+    },
+    "notes": "Все три сентимента neutral: пост — вопрос, ответа автор не даёт. ~4% — доходность, не price_target. Срок парковки «until it's invested» не назван, horizon unknown. Roth IRA — тип счёта, не актив. Взаимные фонды упомянуты как неудобный способ исполнения, без имени и без ставки. Core holdings не названы, тикеры не выдумывать. Заголовок про money market ETF — это запрос, отдельное упоминание класса не нужно."
+  }
+]
