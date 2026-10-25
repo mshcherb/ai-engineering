@@ -1,7 +1,9 @@
 """Output schema: one PostCard per input text."""
 from enum import Enum
 
-from pydantic import BaseModel, ConfigDict, Field
+import re
+
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
 class Sentiment(str, Enum):
@@ -35,6 +37,9 @@ class Language(str, Enum):
     unknown = "unknown"   # no words to judge by (emoji only)
 
 
+TICKER_RE = re.compile(r"[A-Z0-9][A-Z0-9.\-]{0,9}")
+
+
 # extra="forbid" -> additionalProperties: false, required by strict JSON schema mode
 class StockMention(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -47,6 +52,15 @@ class StockMention(BaseModel):
     price_target: float | None = Field(description="Explicit price target if stated, else null")
     horizon: Horizon
     quote: str = Field(description="Exact quote from the text that supports this mention")
+
+    # Checks the JSON schema cannot express; a violation triggers the repair attempt
+    @field_validator("ticker")
+    @classmethod
+    def ticker_format(cls, v: str | None) -> str | None:
+        if v is not None and (v.strip().lower() in {"null", "none", "n/a", ""}
+                              or not TICKER_RE.fullmatch(v)):
+            raise ValueError(f"ticker {v!r}: use an upper-case symbol without '$' (e.g. NVDA, BRK.B) or JSON null")
+        return v
 
 
 class PostCard(BaseModel):

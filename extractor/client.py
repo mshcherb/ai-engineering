@@ -61,15 +61,21 @@ class LLMClient:
         self.client = OpenAI(base_url=base_url, api_key=api_key,
                              timeout=provider_cfg.get("timeout_s", timeout_s), max_retries=0)
 
-    def extract(self, system_prompt: str, text: str,
-                temperature: float, top_p: float) -> CallResult:
+    def extract(self, system_prompt: str, text: str, temperature: float, top_p: float,
+                history: list[dict] | None = None) -> CallResult:
+        """history: extra turns after the text, e.g. a bad answer and a request to fix it."""
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": text},
+            *(history or []),
+        ]
         result = CallResult()
         extra = {"usage": {"include": True}} if self.provider == "openrouter" else None
         start = time.perf_counter()
         for attempt in range(1, self.max_retries + 2):
             result.attempts = attempt
             try:
-                content, usage = self._call(system_prompt, text, temperature, top_p, extra)
+                content, usage = self._call(messages, temperature, top_p, extra)
             except RETRYABLE as e:
                 result.error = f"{type(e).__name__}: {e}"
                 if attempt > self.max_retries:
@@ -90,16 +96,12 @@ class LLMClient:
         result.latency_s = round(time.perf_counter() - start, 3)
         return result
 
-    def _call(self, system_prompt: str, text: str, temperature: float, top_p: float,
-              extra: dict | None):
+    def _call(self, messages: list[dict], temperature: float, top_p: float, extra: dict | None):
         """One streamed request. Returns (content, usage)."""
         start = time.perf_counter()
         stream = self.client.chat.completions.create(
             model=self.model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": text},
-            ],
+            messages=messages,
             temperature=temperature,
             top_p=top_p,
             max_tokens=self.max_tokens,

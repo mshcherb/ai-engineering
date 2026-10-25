@@ -21,7 +21,7 @@ make run                    # підняти контейнери і прогн�
 
 ```bash
 make run-sample             # швидка перевірка на 3 текстах
-make run ARGS="--run llama32_3b_t0 --limit 10"
+make run ARGS="--run llama32_3b_t0 --prompt v2 --limit 10"
 make eval                   # оцінити останні прогони на golden set -> results/metrics.md
 make compare                # прогнати всі конфіги і оцінити (локальна модель ~1 год на конфіг)
 make check                  # перевірити, що OpenRouter і Ollama відповідають
@@ -89,4 +89,16 @@ scripts/              збірка датасету, перевірка сере
 
 ## Кожен запис результату
 
-`id`, `model`, `provider`, `prompt_version`, `temperature`, `top_p`, `status` (ok / invalid / error), `latency_s`, `attempts`, `tokens_in`, `tokens_out`, `cost_usd`, `output` (картка), `error`, `raw` (сирий вихід, якщо невалідний).
+`id`, `model`, `provider`, `prompt_version`, `temperature`, `top_p`, `status`, `latency_s`, `attempts`, `tokens_in`, `tokens_out`, `cost_usd`, `output` (картка), `error`, `repair_reason`, `raw` (сирий вихід, якщо невалідний).
+
+Статуси:
+- `ok` — валідна картка з першої спроби;
+- `repaired` — перша відповідь не пройшла валідацію, модель отримала список помилок і виправила (одна спроба);
+- `failed` — невалідна й після виправлення;
+- `error` — відповіді немає (мережа, таймаут, `deadline_s`).
+
+Валідація = JSON Schema (structured output) + перевірки, яких схема не виражає (формат тикера: `NVDA`, `BRK.B` або `null`, а не рядок `"null"` чи `$tsla`).
+
+## Промпти
+
+`prompts/v1.md`, `prompts/v2.md` — версія й дата у front matter, що й чому змінено — у `prompts/CHANGELOG.md`. Версія за замовчуванням — `prompt_version` у `config.yaml`, інша — `--prompt v2`.

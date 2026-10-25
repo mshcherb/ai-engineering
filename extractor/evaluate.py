@@ -15,7 +15,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 
-FIELDS = ("sentiment", "asset_type", "horizon", "price_target")
+FIELDS = ("ticker", "sentiment", "asset_type", "horizon", "price_target")
 NAME_SUFFIXES = {"inc", "corp", "corporation", "co", "company", "ltd", "plc", "llc",
                  "group", "holdings", "the", "sa", "se", "ag", "nv", "class", "a", "b"}
 
@@ -47,13 +47,13 @@ def norm_name(name: str) -> str:
 
 
 def same_security(g: dict, p: dict) -> bool:
-    """Match by ticker when both have one, otherwise by company name.
+    """Same ticker, or same company name (a wrong ticker is scored separately in ticker_%).
 
     A name equal to the other side's ticker also counts ("BOXX" vs ticker BOXX).
     """
     gt, pt = norm_ticker(g["ticker"]), norm_ticker(p["ticker"])
-    if gt and pt:
-        return gt == pt
+    if gt and pt and gt == pt:
+        return True
     gn, pn = norm_name(g["company"]), norm_name(p["company"])
     if (gt and pn.upper() == gt) or (pt and gn.upper() == pt):
         return True
@@ -75,6 +75,8 @@ def match_mentions(gold: list[dict], pred: list[dict]) -> list[tuple[dict, dict]
 
 
 def field_equal(field: str, g, p) -> bool:
+    if field == "ticker":
+        return norm_ticker(g) == norm_ticker(p)
     if field == "price_target" and g is not None and p is not None:
         return abs(g - p) <= 0.01 * abs(g)
     return g == p
@@ -88,6 +90,7 @@ def evaluate(records: list[dict], golden: dict[str, dict]) -> tuple[dict, list[s
     by_id = {r["id"]: r for r in records}
     n = len(records)
     ok = sum(r["status"] == "ok" for r in records)
+    repaired = sum(r["status"] == "repaired" for r in records)
     latencies = [r["latency_s"] for r in records]
     costs = [r["cost_usd"] or 0.0 for r in records]  # local model: no API cost
 
@@ -141,7 +144,10 @@ def evaluate(records: list[dict], golden: dict[str, dict]) -> tuple[dict, list[s
         "prompt": first["prompt_version"],
         "temp/top_p": f"{first['temperature']}/{first['top_p']}",
         "n": n,
-        "valid_%": pct(ok, n),
+        "valid_%": pct(ok + repaired, n),
+        "valid_first_try_%": pct(ok, n),
+        "repaired": repaired,
+        "failed+error": n - ok - repaired,
         "p50_s": float(np.percentile(latencies, 50)),
         "p95_s": float(np.percentile(latencies, 95)),
         "usd_per_1000": 1000 * sum(costs) / n,
@@ -186,6 +192,8 @@ def main() -> None:
         details.append(f"## {metrics['run']} ({metrics['prompt']}) — `{path.name}`\n\n"
                        + ("\n".join(errors) or "no mismatches") + "\n")
 
+    rows.sort(key=lambda r: (r["model"], r["prompt"], r["temp/top_p"]))
+    details.sort()
     table = to_markdown(rows)
     header = (f"Golden set: {len(golden)} texts. valid / latency / cost — over all texts of a run; "
               "field accuracy — on matched mentions only; cost per 1000 docs, local model = $0 API.\n\n")
