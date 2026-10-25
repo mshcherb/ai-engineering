@@ -50,7 +50,8 @@ def main() -> None:
     run_cfg = cfg["runs"][args.run]
     provider = run_cfg["provider"]
     client = LLMClient(provider, cfg["providers"][provider], run_cfg["model"],
-                       cfg["timeout_s"], cfg["max_retries"], cfg["backoff_base_s"])
+                       cfg["timeout_s"], cfg["max_retries"], cfg["backoff_base_s"],
+                       cfg.get("max_tokens"), cfg.get("deadline_s", 120))
     prompt_version = cfg["prompt_version"]
     system_prompt = load_prompt(prompt_version)
     texts = load_texts(ROOT / cfg["data_path"])[: args.limit]
