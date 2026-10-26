@@ -1,0 +1,418 @@
+# Mismatches vs golden set
+
+## gpt4o_mini_t0 (v1) — `20261025-153919_gpt4o_mini_t0_v1.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** LVMH `horizon`: gold `unknown` / pred `short`
+- **t010** `language`: gold `ru` / pred `mixed`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** missed: Revolut (None)
+- **t019** `is_about_stocks`: gold `True` / pred `False`
+- **t029** missed: SpaceX (None)
+- **t029** extra: AST SpaceMobile (ASTS)
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bullish`
+- **t035** Apple `horizon`: gold `unknown` / pred `short`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t040** Anthropic `asset_type`: gold `private` / pred `other`
+- **t040** Anthropic `price_target`: gold `None` / pred `2000000000000.0`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `private`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `neutral`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `private`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** Alpha Architect 1-3 Month Box ETF `price_target`: gold `None` / pred `4.0`
+- **t044** JPMorgan Ultra-Short Income ETF `ticker`: gold `JPST` / pred `None`
+- **t044** iShares Short Duration Bond Active ETF `ticker`: gold `NEAR` / pred `None`
+
+## gpt4o_mini_t0 (v2) — `20261025-141448_gpt4o_mini_t0_v2.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** missed: LVMH (MC)
+- **t003** extra: Франция (None)
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** `language`: gold `en` / pred `unknown`
+- **t017** missed: Revolut (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t029** missed: SpaceX (None)
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bullish`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `mixed`
+- **t040** Anthropic `price_target`: gold `None` / pred `2000000000000.0`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: Destiny Tech100 (DXYZ)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `mixed`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `ticker`: gold `JPST` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `sentiment`: gold `neutral` / pred `mixed`
+- **t044** iShares Short Duration Bond Active ETF `ticker`: gold `NEAR` / pred `None`
+- **t044** iShares Short Duration Bond Active ETF `sentiment`: gold `neutral` / pred `mixed`
+
+## gpt4o_mini_t0 (v3) — `20261025-152252_gpt4o_mini_t0_v3.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** LVMH `ticker`: gold `MC` / pred `LVMH`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** missed: Revolut (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t029** missed: SpaceX (None)
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `mixed`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `stock`
+- **t044** JPMorgan Ultra-Short Income ETF `sentiment`: gold `neutral` / pred `mixed`
+- **t044** iShares Short Duration Bond Active ETF `sentiment`: gold `neutral` / pred `mixed`
+
+## gpt4o_mini_t07 (v1) — `20261025-154155_gpt4o_mini_t07_v1.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** missed: LVMH (MC)
+- **t003** extra: Франция (None)
+- **t010** `language`: gold `ru` / pred `mixed`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** missed: Revolut (None)
+- **t019** `is_about_stocks`: gold `True` / pred `False`
+- **t020** `language`: gold `uk` / pred `mixed`
+- **t029** missed: SpaceX (None)
+- **t029** extra: ASTS (ASTS)
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bullish`
+- **t035** Apple `horizon`: gold `unknown` / pred `short`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t040** Anthropic `horizon`: gold `unknown` / pred `long`
+- **t040** Anthropic `price_target`: gold `None` / pred `2000000000000.0`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `other`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `neutral`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `other`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `ticker`: gold `JPST` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `sentiment`: gold `neutral` / pred `mixed`
+- **t044** iShares Short Duration Bond Active ETF `ticker`: gold `NEAR` / pred `None`
+- **t044** iShares Short Duration Bond Active ETF `sentiment`: gold `neutral` / pred `mixed`
+
+## gpt4o_mini_t07 (v2) — `20261025-141716_gpt4o_mini_t07_v2.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** missed: LVMH (MC)
+- **t003** extra: Франция (None)
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** `language`: gold `en` / pred `unknown`
+- **t017** missed: Revolut (None)
+- **t020** extra: нерухомість (None)
+- **t029** missed: SpaceX (None)
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bullish`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `mixed`
+- **t040** Anthropic `price_target`: gold `None` / pred `2000000000000.0`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: Destiny Tech100 (DXYZ)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `mixed`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `ticker`: gold `JPST` / pred `None`
+- **t044** JPMorgan Ultra-Short Income ETF `sentiment`: gold `neutral` / pred `mixed`
+- **t044** iShares Short Duration Bond Active ETF `ticker`: gold `NEAR` / pred `None`
+- **t044** iShares Short Duration Bond Active ETF `sentiment`: gold `neutral` / pred `mixed`
+
+## gpt4o_mini_t07 (v3) — `20261025-152510_gpt4o_mini_t07_v3.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t003** LVMH `ticker`: gold `MC` / pred `LVMH`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bearish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** missed: Revolut (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t029** missed: SpaceX (None)
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t035** Apple `price_target`: gold `None` / pred `342.0`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t044** JPMorgan Ultra-Short Income ETF `sentiment`: gold `neutral` / pred `mixed`
+- **t044** iShares Short Duration Bond Active ETF `sentiment`: gold `neutral` / pred `mixed`
+
+## llama32_3b_t0 (v1) — `20261025-170143_llama32_3b_t0_v1.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t001** Goldman Sachs `sentiment`: gold `bullish` / pred `bearish`
+- **t001** Goldman Sachs `horizon`: gold `unknown` / pred `short`
+- **t001** JPMorgan Chase `sentiment`: gold `bearish` / pred `mixed`
+- **t001** JPMorgan Chase `horizon`: gold `unknown` / pred `long`
+- **t001** Citigroup `sentiment`: gold `bullish` / pred `bearish`
+- **t001** Citigroup `horizon`: gold `unknown` / pred `short`
+- **t001** Wells Fargo `sentiment`: gold `mixed` / pred `bearish`
+- **t001** Wells Fargo `horizon`: gold `unknown` / pred `short`
+- **t001** Bank of America `horizon`: gold `unknown` / pred `long`
+- **t003** LVMH `ticker`: gold `MC` / pred `None`
+- **t003** LVMH `horizon`: gold `unknown` / pred `short`
+- **t010** Swarmer Inc `ticker`: gold `SWMR` / pred `NVDA`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `neutral`
+- **t010** Swarmer Inc `horizon`: gold `unknown` / pred `short`
+- **t012** Evolution `horizon`: gold `unknown` / pred `short`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `horizon`: gold `unknown` / pred `short`
+- **t017** `language`: gold `en` / pred `mixed`
+- **t017** missed: Revolut (None)
+- **t019** extra: поскольку (None)
+- **t019** extra: фонд (None)
+- **t019** extra: рынок (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t020** `language`: gold `uk` / pred `ru`
+- **t020** extra: Укрбайбанк (None)
+- **t020** extra: Укрбайбанк (None)
+- **t020** extra: Укрбайбанк (None)
+- **t029** AST SpaceMobile `ticker`: gold `ASTS` / pred `None`
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `neutral`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `short`
+- **t029** SpaceX `asset_type`: gold `private` / pred `stock`
+- **t029** SpaceX `horizon`: gold `unknown` / pred `short`
+- **t035** extra: Walmart (None)
+- **t035** extra: Coca Cola (KO)
+- **t035** extra: iPhone 17 (None)
+- **t035** extra: iPhone 18 Pro (None)
+- **t035** extra: iPhone 18 (None)
+- **t035** Apple `sentiment`: gold `bearish` / pred `neutral`
+- **t035** Apple `horizon`: gold `unknown` / pred `short`
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t040** Anthropic `asset_type`: gold `private` / pred `stock`
+- **t040** Anthropic `horizon`: gold `unknown` / pred `short`
+- **t040** VanEck Semiconductor ETF `sentiment`: gold `neutral` / pred `bearish`
+- **t040** VanEck Semiconductor ETF `asset_type`: gold `etf` / pred `stock`
+- **t040** VanEck Semiconductor ETF `horizon`: gold `unknown` / pred `short`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** extra: Destiny (DXYZ)
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `bullish`
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `stock`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `bullish`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `stock`
+- **t042** Destiny Tech100 `horizon`: gold `unknown` / pred `long`
+- **t042** SpaceX `sentiment`: gold `neutral` / pred `bullish`
+- **t042** SpaceX `asset_type`: gold `private` / pred `stock`
+- **t042** SpaceX `horizon`: gold `unknown` / pred `long`
+- **t042** OpenAI `sentiment`: gold `neutral` / pred `bullish`
+- **t042** OpenAI `asset_type`: gold `private` / pred `stock`
+- **t042** OpenAI `horizon`: gold `unknown` / pred `long`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** Alpha Architect 1-3 Month Box ETF `horizon`: gold `unknown` / pred `short`
+- **t044** JPMorgan Ultra-Short Income ETF `horizon`: gold `unknown` / pred `short`
+- **t044** iShares Short Duration Bond Active ETF `horizon`: gold `unknown` / pred `short`
+
+## llama32_3b_t0 (v2) — `20261025-151225_llama32_3b_t0_v2.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t001** missed: JPMorgan Chase (JPM)
+- **t001** missed: Citigroup (C)
+- **t001** missed: Wells Fargo (WFC)
+- **t001** missed: Bank of America (BAC)
+- **t001** Goldman Sachs `ticker`: gold `GS` / pred `NVDA`
+- **t001** Goldman Sachs `horizon`: gold `unknown` / pred `long`
+- **t003** `language`: gold `ru` / pred `mixed`
+- **t003** extra: Франция (None)
+- **t003** LVMH `ticker`: gold `MC` / pred `LVMH`
+- **t010** missed: Swarmer Inc (SWMR)
+- **t010** extra: \u041aомпаниы Свмр (None)
+- **t012**: no valid output (failed)
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** `language`: gold `ru` / pred `mixed`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t013** Tesla `horizon`: gold `unknown` / pred `long`
+- **t015** extra:  (None)
+- **t017** `is_about_stocks`: gold `False` / pred `True`
+- **t017** Revolut `asset_type`: gold `private` / pred `other`
+- **t019** extra:  (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t020** `language`: gold `uk` / pred `ru`
+- **t020** extra: Укрпошта (None)
+- **t025** `language`: gold `unknown` / pred `en`
+- **t029** `language`: gold `en` / pred `mixed`
+- **t029** missed: SpaceX (None)
+- **t029** AST SpaceMobile `ticker`: gold `ASTS` / pred `None`
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bearish`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t035** `language`: gold `en` / pred `mixed`
+- **t035** Apple `ticker`: gold `AAPL` / pred `None`
+- **t035** Apple `horizon`: gold `unknown` / pred `long`
+- **t040** `language`: gold `en` / pred `mixed`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `bullish`
+- **t040** Anthropic `horizon`: gold `unknown` / pred `long`
+- **t042** `language`: gold `en` / pred `mixed`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `ticker`: gold `BOT` / pred `None`
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `bullish`
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `private`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t042** Destiny Tech100 `ticker`: gold `DXYZ` / pred `None`
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `neutral`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `private`
+- **t044** missed: JPMorgan Ultra-Short Income ETF (JPST)
+- **t044** missed: iShares Short Duration Bond Active ETF (NEAR)
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+
+## llama32_3b_t0 (v3) — `20261025-155723_llama32_3b_t0_v3.jsonl`
+
+- **t001** `language`: gold `mixed` / pred `ru`
+- **t001** missed: JPMorgan Chase (JPM)
+- **t001** missed: Citigroup (C)
+- **t001** missed: Wells Fargo (WFC)
+- **t001** missed: Bank of America (BAC)
+- **t001** Goldman Sachs `price_target`: gold `None` / pred `17.01`
+- **t003** extra: France (None)
+- **t003** LVMH `ticker`: gold `MC` / pred `LVMH`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `bullish`
+- **t012** Evolution `sentiment`: gold `neutral` / pred `bullish`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `sentiment`: gold `neutral` / pred `bullish`
+- **t017** `is_about_stocks`: gold `False` / pred `True`
+- **t019** extra: фонд (None)
+- **t019** extra: фонд (None)
+- **t019** extra: фонд (None)
+- **t020** `language`: gold `uk` / pred `ru`
+- **t020** extra: Укрбайдзолота (None)
+- **t020** extra: Дніпровсталь (None)
+- **t020** extra: Укртрансгаз (None)
+- **t025** `language`: gold `unknown` / pred `en`
+- **t029** AST SpaceMobile `ticker`: gold `ASTS` / pred `None`
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bearish`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `unknown`
+- **t029** SpaceX `asset_type`: gold `private` / pred `stock`
+- **t035** Apple `price_target`: gold `None` / pred `342.0`
+- **t040** missed: VanEck Semiconductor ETF (SMH)
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `bullish`
+- **t042** missed: Figure AI (None)
+- **t042** missed: Apptronik (None)
+- **t042** missed: Dyna Robotics (None)
+- **t042** missed: Standard Bots (None)
+- **t042** missed: Destiny Tech100 (DXYZ)
+- **t042** missed: SpaceX (None)
+- **t042** missed: OpenAI (None)
+- **t042** RoboStrategy `ticker`: gold `BOT` / pred `None`
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `bullish`
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `private`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `medium`
+- **t042** RoboStrategy `price_target`: gold `None` / pred `28.0`
+- **t044** `is_about_stocks`: gold `True` / pred `False`
+- **t044** missed: JPMorgan Ultra-Short Income ETF (JPST)
+- **t044** missed: iShares Short Duration Bond Active ETF (NEAR)
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+
+## llama32_3b_t07 (v1) — `20261025-143113_llama32_3b_t07_v1.jsonl`
+
+- **t001** Goldman Sachs `sentiment`: gold `bullish` / pred `bearish`
+- **t001** Goldman Sachs `horizon`: gold `unknown` / pred `short`
+- **t001** JPMorgan Chase `sentiment`: gold `bearish` / pred `mixed`
+- **t001** JPMorgan Chase `horizon`: gold `unknown` / pred `long`
+- **t001** Citigroup `sentiment`: gold `bullish` / pred `bearish`
+- **t001** Citigroup `horizon`: gold `unknown` / pred `short`
+- **t001** Wells Fargo `sentiment`: gold `mixed` / pred `bearish`
+- **t001** Wells Fargo `horizon`: gold `unknown` / pred `long`
+- **t001** Bank of America `horizon`: gold `unknown` / pred `short`
+- **t003** LVMH `ticker`: gold `MC` / pred `None`
+- **t003** LVMH `horizon`: gold `unknown` / pred `short`
+- **t010** Swarmer Inc `sentiment`: gold `mixed` / pred `neutral`
+- **t010** Swarmer Inc `horizon`: gold `unknown` / pred `short`
+- **t012** Evolution `horizon`: gold `unknown` / pred `short`
+- **t012** Evolution `price_target`: gold `1000` / pred `None`
+- **t013** `is_about_stocks`: gold `False` / pred `True`
+- **t013** Tesla `horizon`: gold `unknown` / pred `long`
+- **t017** `language`: gold `en` / pred `ru`
+- **t017** missed: Revolut (None)
+- **t019** extra: фонд (None)
+- **t019** extra: рынок (None)
+- **t020** `is_about_stocks`: gold `True` / pred `False`
+- **t020** `language`: gold `uk` / pred `ru`
+- **t029** AST SpaceMobile `ticker`: gold `ASTS` / pred `None`
+- **t029** AST SpaceMobile `sentiment`: gold `mixed` / pred `bearish`
+- **t029** AST SpaceMobile `horizon`: gold `long` / pred `short`
+- **t029** SpaceX `asset_type`: gold `private` / pred `stock`
+- **t029** SpaceX `horizon`: gold `unknown` / pred `long`
+- **t035** extra: Walmart (None)
+- **t035** extra: Coca Cola (KO)
+- **t035** Apple `sentiment`: gold `bearish` / pred `neutral`
+- **t035** Apple `horizon`: gold `unknown` / pred `short`
+- **t040** Anthropic `sentiment`: gold `bearish` / pred `neutral`
+- **t040** Anthropic `asset_type`: gold `private` / pred `stock`
+- **t040** Anthropic `horizon`: gold `unknown` / pred `short`
+- **t040** VanEck Semiconductor ETF `sentiment`: gold `neutral` / pred `bearish`
+- **t040** VanEck Semiconductor ETF `asset_type`: gold `etf` / pred `stock`
+- **t040** VanEck Semiconductor ETF `horizon`: gold `unknown` / pred `short`
+- **t042** missed: Standard Bots (None)
+- **t042** RoboStrategy `ticker`: gold `BOT` / pred `None`
+- **t042** RoboStrategy `sentiment`: gold `bearish` / pred `bullish`
+- **t042** RoboStrategy `asset_type`: gold `etf` / pred `stock`
+- **t042** RoboStrategy `horizon`: gold `unknown` / pred `long`
+- **t042** Figure AI `sentiment`: gold `neutral` / pred `bullish`
+- **t042** Figure AI `horizon`: gold `unknown` / pred `long`
+- **t042** Apptronik `sentiment`: gold `neutral` / pred `bullish`
+- **t042** Apptronik `horizon`: gold `unknown` / pred `long`
+- **t042** Dyna Robotics `sentiment`: gold `neutral` / pred `bullish`
+- **t042** Dyna Robotics `horizon`: gold `unknown` / pred `long`
+- **t042** Destiny Tech100 `sentiment`: gold `bearish` / pred `bullish`
+- **t042** Destiny Tech100 `asset_type`: gold `etf` / pred `stock`
+- **t042** Destiny Tech100 `horizon`: gold `unknown` / pred `long`
+- **t042** SpaceX `ticker`: gold `None` / pred `SPX`
+- **t042** SpaceX `sentiment`: gold `neutral` / pred `bullish`
+- **t042** SpaceX `horizon`: gold `unknown` / pred `long`
+- **t042** OpenAI `ticker`: gold `None` / pred `GOOGL`
+- **t042** OpenAI `sentiment`: gold `neutral` / pred `bullish`
+- **t042** OpenAI `horizon`: gold `unknown` / pred `long`
+- **t044** Alpha Architect 1-3 Month Box ETF `ticker`: gold `BOXX` / pred `None`
+- **t044** Alpha Architect 1-3 Month Box ETF `horizon`: gold `unknown` / pred `short`
+- **t044** JPMorgan Ultra-Short Income ETF `horizon`: gold `unknown` / pred `short`
+- **t044** iShares Short Duration Bond Active ETF `horizon`: gold `unknown` / pred `short`

@@ -1,0 +1,52 @@
+# Extraction run settings. Secrets live in .env, never here.
+
+data_path: data/texts.jsonl
+results_dir: results
+prompt_version: v3          # chosen in REPORT.md; override with --prompt
+
+# Network safety: per-request timeout and retries with exponential backoff
+timeout_s: 60
+max_retries: 3
+backoff_base_s: 2
+max_tokens: 2048        # cap on output length: stops a runaway generation
+deadline_s: 120         # hard limit for one call, whatever happens on the server
+
+providers:
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+  ollama:
+    base_url_env: OLLAMA_BASE_URL          # set in docker-compose
+    base_url: http://localhost:11434/v1    # fallback outside docker
+    api_key: ollama                        # Ollama ignores it, SDK requires one
+    timeout_s: 120                         # max silence between bytes (prompt processing ~50 s on CPU)
+    deadline_s: 600                        # CPU-only, ~10 tokens/s: a long card takes ~2.5 min
+
+# Which model to run by default (`make run`), plus sampling params.
+# `make compare` runs every config below and evaluates them against the golden set.
+default_run: gpt4o_mini_t0
+
+# Two sampling configs per model:
+#   t0   - deterministic (temperature 0), the expected production setting
+#   t07  - temperature 0.7 + top_p 0.9, to see how much randomness hurts accuracy
+runs:
+  gpt4o_mini_t0:
+    provider: openrouter
+    model: openai/gpt-4o-mini
+    temperature: 0.0
+    top_p: 1.0
+  gpt4o_mini_t07:
+    provider: openrouter
+    model: openai/gpt-4o-mini
+    temperature: 0.7
+    top_p: 0.9
+  llama32_3b_t0:
+    provider: ollama
+    model: llama3.2:3b
+    temperature: 0.0
+    top_p: 1.0
+  llama32_3b_t07:
+    provider: ollama
+    model: llama3.2:3b
+    temperature: 0.7
+    top_p: 0.9

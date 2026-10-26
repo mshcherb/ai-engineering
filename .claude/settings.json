@@ -12,7 +12,20 @@
       "Bash(sudo:*)",
       "Bash(git push --force:*)",
       "Bash(git reset --hard:*)",
-      "Bash(git clean:*)"
+      "Bash(git clean:*)",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_send_message",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_send_message_draft",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_schedule_message",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_add_reaction",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_create_conversation",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_create_canvas",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_update_canvas",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_create_list",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_update_list",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_add_list_record",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_update_list_record",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_get_file_upload_url",
+      "mcp__7713e425-19a5-462c-a581-4225246eaf7e__slack_complete_file_upload"
     ],
     "allow": [
       "Bash(git status:*)",

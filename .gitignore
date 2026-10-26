@@ -23,3 +23,7 @@ mlruns/
 # Docker
 .docker/
 /START.md
+
+# Локальные заметки: в git только notes/README.md
+notes/**
+!notes/README.md
