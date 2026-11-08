@@ -27,3 +27,6 @@ mlruns/
 # Локальные заметки: в git только notes/README.md
 notes/**
 !notes/README.md
+
+# HW2 raw corpus: large, re-downloadable with scripts/fetch_corpus.py (sha256 in manifest.csv)
+data/corpus/raw/

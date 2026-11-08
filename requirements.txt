@@ -8,6 +8,15 @@ openai>=1.50
 python-dotenv>=1.0
 pyyaml>=6.0
 
+# RAG (HW2): ingestion, chunking, search
+beautifulsoup4>=4.12
+lxml>=5.0
+pypdf>=4.0
+tiktoken>=0.7
+qdrant-client>=1.12
+fastembed>=0.5
+rank-bm25>=0.2.2
+
 # ML (course block 3 + mini-task)
 numpy>=1.26
 pandas>=2.2

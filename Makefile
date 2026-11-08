@@ -1,4 +1,4 @@
-.PHONY: up run run-sample eval compare data check down
+.PHONY: up run run-sample eval compare data check down corpus ingest
 
 # Start containers (python + ollama)
 up:
@@ -29,6 +29,14 @@ data: up
 # Check that OpenRouter and Ollama answer
 check: up
 	docker compose exec python python scripts/check_env.py
+
+# HW2: download the RAG corpus from SEC EDGAR (needs SEC_USER_AGENT in .env; IR PDFs are saved by hand)
+corpus: up
+	docker compose exec python python scripts/fetch_corpus.py
+
+# HW2: raw documents -> data/corpus/chunks.jsonl (+ ingest_report.json)
+ingest: up
+	docker compose exec python python -m rag.ingest
 
 down:
 	docker compose down
