@@ -1,7 +1,7 @@
 """Numbers in English sources and Russian answers, compared by value instead of by string.
 
     numbers("$ 18,679 миллионов")         -> [{18679000000.0, 18679000.0}]
-    fact_found("$18.68 billion", answer)   -> True when the answer has 18.68e9 within TOLERANCE
+    fact_found("$18.68 billion", answer)   -> True when the answer has 18.68e9 up to rounding
 
 The model copies numbers from English sources into Russian sentences, so the same fact comes as
 "$6.06 billion", "$6,06 миллиарда", "$6,055 миллиарда" (a Russian decimal comma) or "$6,055 million".
@@ -10,6 +10,8 @@ A comma before exactly three digits is ambiguous, so such a number keeps both re
 import re
 
 TOLERANCE = 0.005    # relative: "$54.2 billion" matches 54.23e9, 66.4% does not match 67.7%
+# A reference is rounded too: "$3.5 billion" stands for $3,521 million, so a fact also allows half of
+# its last digit (±0.05 billion here); "318,512" is exact, "68%" allows 67.5-68.5.
 
 SCALES = [
     (r"trillion|трлн|триллион\w*", 1e12),
@@ -66,20 +68,18 @@ def numbers(text: str) -> list[set[float]]:
     return out
 
 
-def value_of(fact: str) -> float:
-    """The value of a `must` fact of the testset, written the English way: '$50.2 billion', '318,512'."""
-    nums = numbers(fact)
-    if len(nums) != 1:
+def value_of(fact: str) -> tuple[float, float]:
+    """(value, rounding allowance) of a `must` fact, written the English way: '$50.2 billion', '318,512'."""
+    if len(numbers(fact)) != 1:
         raise ValueError(f"a fact must hold exactly one number: {fact!r}")
     m = NUMBER_RE.search(fact)
     s = SCALE_RE.match(fact, m.end())
-    return readings(m.group(1))[0] * (scale_of(s.group(1)) if s else 1.0)
-
-
-def close(a: float, b: float) -> bool:
-    return abs(a - b) <= TOLERANCE * max(abs(a), abs(b))
+    scale = scale_of(s.group(1)) if s else 1.0
+    decimals = len(m.group(1).split(".")[1]) if "." in m.group(1) else 0
+    return readings(m.group(1))[0] * scale, 0.5 * 10 ** -decimals * scale
 
 
 def fact_found(fact: str, text: str) -> bool:
-    target = value_of(fact)
-    return any(close(v, target) for values in numbers(text) for v in values)
+    target, allowance = value_of(fact)
+    allowed = max(allowance, TOLERANCE * abs(target))
+    return any(abs(v - target) <= allowed for values in numbers(text) for v in values)

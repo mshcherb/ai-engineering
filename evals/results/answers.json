@@ -1,0 +1,33 @@
+{
+  "n": 29,
+  "pass": 1.0,
+  "source": 1.0,
+  "facts": 1.0,
+  "abstain": 1.0,
+  "false_abstain": 0.0,
+  "by_type": {
+    "fact": {
+      "n": 8,
+      "pass": 1.0
+    },
+    "narrative": {
+      "n": 2,
+      "pass": 1.0
+    },
+    "no_answer": {
+      "n": 5,
+      "pass": 1.0
+    },
+    "similar_docs": {
+      "n": 6,
+      "pass": 1.0
+    },
+    "version_trap": {
+      "n": 8,
+      "pass": 1.0
+    }
+  },
+  "failed": [],
+  "cost_per_1000_usd": 0.451,
+  "latency_p50_s": 4.75
+}

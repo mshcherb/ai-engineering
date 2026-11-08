@@ -1,4 +1,4 @@
-.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval ask answers-sample
+.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval ask answers-sample lint-testset eval-answers
 
 # Start containers (python + ollama)
 up:
@@ -54,6 +54,14 @@ ask: up
 # HW2: all retrieval questions through the RAG pipeline -> evals/results/answers_sample_<prompt>.md
 answers-sample: up
 	docker compose exec python python -m rag.answer --sample
+
+# HW2: check evals/testset.jsonl against the corpus (doc ids, evidence, must facts)
+lint-testset: up
+	docker compose exec python python -m evals.testset
+
+# HW2: testset through RAG -> evals/results/answers.{jsonl,json,md}; ARGS=--rescore scores saved answers for free
+eval-answers: up
+	docker compose exec python python -m evals.answer_eval $(ARGS)
 
 down:
 	docker compose down
