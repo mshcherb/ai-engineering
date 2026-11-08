@@ -234,7 +234,12 @@ def main() -> None:
     for d in sorted((d for d in docs if d["status"] == "ok"), key=lambda d: not d["latest"]):
         doc_id = d["doc_id"]
         chunks = chunk_sections(blocks_by_doc[doc_id])
-        fixed_all += chunk_fixed(texts[doc_id])
+        meta = {"doc_id": doc_id, "ticker": d["ticker"], "company": d["company"], "kind": d["kind"],
+                "form": d["form"], "period": d["period"], "filed": d["filed"], "latest": d["latest"],
+                "title": doc_title(d), "url": d["url"], "format": d["format"], "doc_hash": d["doc_hash"]}
+        # the fixed-size baseline gets the same metadata, so retrieval can be compared fairly
+        fixed_all += [{**meta, **c, "chunk_id": f"{doc_id}#f{i}", "chunk_index": i}
+                      for i, c in enumerate(chunk_fixed(texts[doc_id]))]
         kept = 0
         for i, c in enumerate(chunks):
             h = content_hash(c["text"])
@@ -244,11 +249,8 @@ def main() -> None:
             seen_chunks[h] = f"{doc_id}#{i}"
             kept += 1
             all_chunks.append({
-                "chunk_id": f"{doc_id}#{i}", "doc_id": doc_id, "ticker": d["ticker"], "company": d["company"],
-                "kind": d["kind"], "form": d["form"], "period": d["period"], "filed": d["filed"],
-                "latest": d["latest"], "title": doc_title(d), "section": c["section"], "page": c["page"],
-                "url": d["url"], "format": d["format"], "doc_hash": d["doc_hash"], "chunk_hash": h,
-                "chunk_index": i, "n_tokens": n_tokens(c["text"]), "text": c["text"],
+                "chunk_id": f"{doc_id}#{i}", **meta, "section": c["section"], "page": c["page"],
+                "chunk_hash": h, "chunk_index": i, "n_tokens": n_tokens(c["text"]), "text": c["text"],
                 "pipeline_version": PIPELINE_VERSION, "ingested_at": now,
             })
         report["documents"][doc_id] = {"words": len(texts[doc_id].split()), "chunks": kept,
@@ -257,6 +259,9 @@ def main() -> None:
     report["chunking"] = {"sections": chunk_stats(all_chunks), "fixed": chunk_stats(fixed_all)}
     with (CORPUS / "chunks.jsonl").open("w", encoding="utf-8") as f:
         for c in all_chunks:
+            f.write(json.dumps(c, ensure_ascii=False) + "\n")
+    with (CORPUS / "chunks_fixed.jsonl").open("w", encoding="utf-8") as f:  # baseline, not committed
+        for c in fixed_all:
             f.write(json.dumps(c, ensure_ascii=False) + "\n")
     (CORPUS / "ingest_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n{len(all_chunks)} chunks from {len(report['documents'])} documents -> data/corpus/chunks.jsonl")

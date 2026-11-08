@@ -1,4 +1,4 @@
-.PHONY: up run run-sample eval compare data check down corpus ingest
+.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval
 
 # Start containers (python + ollama)
 up:
@@ -37,6 +37,15 @@ corpus: up
 # HW2: raw documents -> data/corpus/chunks.jsonl (+ ingest_report.json)
 ingest: up
 	docker compose exec python python -m rag.ingest
+
+# HW2: embed chunks (cached in data/corpus/embeddings.npz; first run ~25 min on CPU)
+index: up
+	docker compose exec python python -m rag.index
+	docker compose exec python python -m rag.index --chunks fixed
+
+# HW2: recall@k / MRR for vector, BM25, hybrid, hybrid+rerank on both chunkings
+eval-retrieval: up
+	docker compose exec python python -m evals.retrieval_eval
 
 down:
 	docker compose down

@@ -1,0 +1,464 @@
+{
+  "sections | vector": {
+    "recall@5": 0.611,
+    "recall@10": 0.722,
+    "mrr@10": 0.5,
+    "p50_s": 0.1,
+    "misses": [
+      {
+        "id": "r01",
+        "rank": null,
+        "top1": "JPM_earnings_2026-10-13#0"
+      },
+      {
+        "id": "r02",
+        "rank": null,
+        "top1": "JPM_earnings_2026-07-14#0"
+      },
+      {
+        "id": "r03",
+        "rank": 10,
+        "top1": "JPM_annual_2024-12-31#923"
+      },
+      {
+        "id": "r06",
+        "rank": null,
+        "top1": "BAC_earnings_2026-10-14#44"
+      },
+      {
+        "id": "r11",
+        "rank": 7,
+        "top1": "NVDA_annual_2026-01-25#96"
+      },
+      {
+        "id": "r13",
+        "rank": null,
+        "top1": "TSM_annual_2025-12-31#426"
+      },
+      {
+        "id": "r18",
+        "rank": null,
+        "top1": "ASML_annual_2025-12-31#154"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | vector + ticker filter": {
+    "recall@5": 0.611,
+    "recall@10": 0.722,
+    "mrr@10": 0.5,
+    "p50_s": 0.33,
+    "misses": [
+      {
+        "id": "r01",
+        "rank": null,
+        "top1": "JPM_earnings_2026-10-13#0"
+      },
+      {
+        "id": "r02",
+        "rank": null,
+        "top1": "JPM_earnings_2026-07-14#0"
+      },
+      {
+        "id": "r03",
+        "rank": 10,
+        "top1": "JPM_annual_2024-12-31#923"
+      },
+      {
+        "id": "r06",
+        "rank": null,
+        "top1": "BAC_earnings_2026-10-14#44"
+      },
+      {
+        "id": "r11",
+        "rank": 7,
+        "top1": "NVDA_annual_2026-01-25#96"
+      },
+      {
+        "id": "r13",
+        "rank": null,
+        "top1": "TSM_annual_2025-12-31#426"
+      },
+      {
+        "id": "r18",
+        "rank": null,
+        "top1": "ASML_annual_2025-12-31#154"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | bm25": {
+    "recall@5": 0.611,
+    "recall@10": 0.722,
+    "mrr@10": 0.534,
+    "p50_s": 0.02,
+    "misses": [
+      {
+        "id": "r02",
+        "rank": null,
+        "top1": "JPM_earnings_2026-07-14#21"
+      },
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "C_annual_2025-12-31#126"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#88"
+      },
+      {
+        "id": "r12",
+        "rank": 9,
+        "top1": "TSM_earnings_release_2026Q3#0"
+      },
+      {
+        "id": "r15",
+        "rank": null,
+        "top1": "JPM_annual_2025-12-31#8"
+      },
+      {
+        "id": "r16",
+        "rank": null,
+        "top1": "TSLA_earnings_2026-10-21#10"
+      },
+      {
+        "id": "r18",
+        "rank": 6,
+        "top1": "ASML_annual_2025-12-31#712"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | bm25 + ticker filter": {
+    "recall@5": 0.611,
+    "recall@10": 0.722,
+    "mrr@10": 0.537,
+    "p50_s": 0.02,
+    "misses": [
+      {
+        "id": "r02",
+        "rank": null,
+        "top1": "JPM_earnings_2026-07-14#21"
+      },
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "JPM_annual_2024-12-31#923"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#88"
+      },
+      {
+        "id": "r12",
+        "rank": 6,
+        "top1": "TSM_earnings_release_2026Q3#0"
+      },
+      {
+        "id": "r15",
+        "rank": null,
+        "top1": "JPM_annual_2025-12-31#8"
+      },
+      {
+        "id": "r16",
+        "rank": null,
+        "top1": "TSLA_earnings_2026-10-21#10"
+      },
+      {
+        "id": "r18",
+        "rank": 6,
+        "top1": "ASML_annual_2025-12-31#712"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | hybrid": {
+    "recall@5": 0.667,
+    "recall@10": 0.889,
+    "mrr@10": 0.542,
+    "p50_s": 0.15,
+    "misses": [
+      {
+        "id": "r02",
+        "rank": 8,
+        "top1": "JPM_annual_2024-12-31#162"
+      },
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "JPM_annual_2024-12-31#923"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#88"
+      },
+      {
+        "id": "r13",
+        "rank": 6,
+        "top1": "TSM_earnings_release_2026Q3#0"
+      },
+      {
+        "id": "r16",
+        "rank": 6,
+        "top1": "TSLA_earnings_2026-10-21#10"
+      },
+      {
+        "id": "r18",
+        "rank": 8,
+        "top1": "ASML_annual_2025-12-31#1031"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | hybrid + ticker filter": {
+    "recall@5": 0.667,
+    "recall@10": 0.889,
+    "mrr@10": 0.519,
+    "p50_s": 0.34,
+    "misses": [
+      {
+        "id": "r02",
+        "rank": 8,
+        "top1": "JPM_annual_2024-12-31#162"
+      },
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "JPM_annual_2024-12-31#923"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#88"
+      },
+      {
+        "id": "r13",
+        "rank": 6,
+        "top1": "TSM_earnings_release_2026Q3#0"
+      },
+      {
+        "id": "r15",
+        "rank": 6,
+        "top1": "JPM_annual_2025-12-31#8"
+      },
+      {
+        "id": "r18",
+        "rank": 8,
+        "top1": "ASML_annual_2025-12-31#1031"
+      }
+    ],
+    "unreachable": []
+  },
+  "sections | hybrid+rerank": {
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "mrr@10": 0.81,
+    "p50_s": 2.67,
+    "misses": [],
+    "unreachable": []
+  },
+  "sections | hybrid+rerank + ticker filter": {
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "mrr@10": 0.81,
+    "p50_s": 2.79,
+    "misses": [],
+    "unreachable": []
+  },
+  "fixed | vector": {
+    "recall@5": 0.833,
+    "recall@10": 1.0,
+    "mrr@10": 0.662,
+    "p50_s": 0.1,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": 6,
+        "top1": "JPM_annual_2024-12-31#f761"
+      },
+      {
+        "id": "r06",
+        "rank": 8,
+        "top1": "BAC_earnings_2026-10-14#f2"
+      },
+      {
+        "id": "r11",
+        "rank": 8,
+        "top1": "NVDA_annual_2026-01-25#f68"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | vector + ticker filter": {
+    "recall@5": 0.833,
+    "recall@10": 1.0,
+    "mrr@10": 0.662,
+    "p50_s": 0.28,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": 6,
+        "top1": "JPM_annual_2024-12-31#f761"
+      },
+      {
+        "id": "r06",
+        "rank": 8,
+        "top1": "BAC_earnings_2026-10-14#f2"
+      },
+      {
+        "id": "r11",
+        "rank": 8,
+        "top1": "NVDA_annual_2026-01-25#f68"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | bm25": {
+    "recall@5": 0.778,
+    "recall@10": 0.833,
+    "mrr@10": 0.463,
+    "p50_s": 0.02,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "C_annual_2025-12-31#f100"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      },
+      {
+        "id": "r12",
+        "rank": 7,
+        "top1": "TSM_earnings_release_2026Q3#f0"
+      },
+      {
+        "id": "r15",
+        "rank": null,
+        "top1": "JPM_annual_2025-12-31#f180"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | bm25 + ticker filter": {
+    "recall@5": 0.778,
+    "recall@10": 0.833,
+    "mrr@10": 0.467,
+    "p50_s": 0.02,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "JPM_annual_2025-12-31#f232"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      },
+      {
+        "id": "r12",
+        "rank": 6,
+        "top1": "TSM_earnings_release_2026Q3#f0"
+      },
+      {
+        "id": "r15",
+        "rank": null,
+        "top1": "JPM_annual_2025-12-31#f180"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | hybrid": {
+    "recall@5": 0.833,
+    "recall@10": 0.889,
+    "mrr@10": 0.644,
+    "p50_s": 0.12,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": null,
+        "top1": "JPM_annual_2024-12-31#f762"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      },
+      {
+        "id": "r15",
+        "rank": 7,
+        "top1": "JPM_annual_2025-12-31#f180"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | hybrid + ticker filter": {
+    "recall@5": 0.833,
+    "recall@10": 0.944,
+    "mrr@10": 0.651,
+    "p50_s": 0.29,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": 7,
+        "top1": "JPM_annual_2024-12-31#f761"
+      },
+      {
+        "id": "r11",
+        "rank": null,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      },
+      {
+        "id": "r15",
+        "rank": 8,
+        "top1": "JPM_annual_2025-12-31#f180"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | hybrid+rerank": {
+    "recall@5": 0.889,
+    "recall@10": 1.0,
+    "mrr@10": 0.789,
+    "p50_s": 2.75,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": 10,
+        "top1": "JPM_annual_2024-12-31#f140"
+      },
+      {
+        "id": "r11",
+        "rank": 10,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      }
+    ],
+    "unreachable": []
+  },
+  "fixed | hybrid+rerank + ticker filter": {
+    "recall@5": 0.889,
+    "recall@10": 1.0,
+    "mrr@10": 0.79,
+    "p50_s": 2.83,
+    "misses": [
+      {
+        "id": "r03",
+        "rank": 10,
+        "top1": "JPM_annual_2024-12-31#f140"
+      },
+      {
+        "id": "r11",
+        "rank": 8,
+        "top1": "NVDA_annual_2026-01-25#f69"
+      }
+    ],
+    "unreachable": []
+  }
+}
