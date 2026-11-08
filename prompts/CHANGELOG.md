@@ -25,3 +25,24 @@ v2 rules alone did not help gpt-4o-mini (mention F1 77% → 71%, sentiment 53% �
 - **`price_target`**: per-share target (the author's or a quoted analyst's); yield is not a target.
 
 Every example is checked against the schema when the prompt is built.
+
+# HW2: query rewriting prompts (`rag/rewrite.py`)
+
+## rewrite_v1 — 2026-11-08
+A Russian question → `{query_en, tickers, period}` (structured output, gpt-4o-mini, t = 0).
+- The corpus, the embedding model and BM25 are English-only, so the question is rewritten into the wording a filing uses: the company's official name, the standard metric name, the period in full words.
+- The list of corpus companies with tickers is inserted at run time from `chunks.jsonl` (`{companies}`), so slang and Cyrillic names map to the right ticker.
+- `period` is only year / quarter / fiscal; the code turns it into a date range (the model does not compute dates). Fiscal periods and forecasts get no date filter.
+- 5 made-up examples, none from `evals/retrieval_questions.jsonl`.
+
+## rewrite_v2 — 2026-11-08
+v1 turned «Киберкаб» into "Cybertruck" (r16): it swapped a Cyrillic product name for a better-known product of the same company. Retrieval did not suffer (the ticker and period filters kept the right release), but an answer built on that query would be about the wrong product.
+- Rule: names of products, projects and segments are transliterated letter by letter, never replaced by a similar-sounding product.
+- One more made-up example (Amazon, «Кайпер» → "Kuiper").
+
+Note: the fix was prompted by an error on a test question (r16), so the gain on r16 is not an independent measurement; the example is deliberately about another company and product.
+
+**Result: rejected, `config.yaml` stays on rewrite_v1.** On the 18 retrieval questions (sections, hybrid + rerank, with LLM filters) recall@5 fell 1.00 → 0.94, MRR 0.76 → 0.69:
+- r16 is still "Cybertruck": gpt-4o-mini ignores the rule for a product it knows much better than "Cybercab".
+- r13 broke: "прогноз на Q4 2026" now gets period Q4 2026 (v1: null), the date filter drops the Q3 report that holds the forecast. A longer prompt shifted the model on a rule that had nothing to do with the change.
+Lesson: a prompt change is checked on the whole set, not only on the question it targets. A safer fix for both is in code, not in the prompt (step 3): retry without the period filter when the filtered search returns nothing, and pass the original Russian question to the answering model.

@@ -72,10 +72,10 @@ class PostCard(BaseModel):
     summary: str = Field(description="One sentence in Russian: what the text is about")
 
 
-def json_schema() -> dict:
+def json_schema(model: type[BaseModel] = PostCard) -> dict:
     """Schema in the shape OpenAI-compatible `response_format` expects."""
     return {
-        "name": "PostCard",
+        "name": model.__name__,
         "strict": True,
-        "schema": PostCard.model_json_schema(),
+        "schema": model.model_json_schema(),
     }

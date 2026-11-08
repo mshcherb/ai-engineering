@@ -1,0 +1,388 @@
+{
+  "tickers_ok": 18,
+  "keeps_answer": 18,
+  "errors": 0,
+  "cost_per_1000_usd": 0.119,
+  "questions": [
+    {
+      "id": "r01",
+      "query_en": "What was JPMorgan's net revenues for the third quarter of 2026?",
+      "tickers": [
+        "JPM"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "JPM"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r02",
+      "query_en": "What was JPMorgan Chase's net revenues in the second quarter of 2026?",
+      "tickers": [
+        "JPM"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 2,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "JPM"
+        ],
+        "period_from": "2026-06-30",
+        "period_to": "2026-09-13"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r03",
+      "query_en": "What was JPMorgan's CET1 capital ratio at the end of the third quarter of 2026?",
+      "tickers": [
+        "JPM"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "JPM"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r04",
+      "query_en": "What was Goldman Sachs' net revenues in the third quarter of 2026?",
+      "tickers": [
+        "GS"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "GS"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r05",
+      "query_en": "What was Citigroup's net income for the third quarter of 2026 according to their report?",
+      "tickers": [
+        "C"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "C"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r06",
+      "query_en": "What was the net income of Bank of America's Consumer Banking segment in the third quarter of 2026?",
+      "tickers": [
+        "BAC"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "BAC"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r07",
+      "query_en": "How much did AWS sales grow compared to last year in the third quarter of 2026?",
+      "tickers": [
+        "AMZN"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "AMZN"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r08",
+      "query_en": "What was Micron's revenue for the fourth quarter of fiscal year 2026?",
+      "tickers": [
+        "MU"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 4,
+        "fiscal": true
+      },
+      "filters": {
+        "ticker": [
+          "MU"
+        ]
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r09",
+      "query_en": "What were Texas Instruments' net revenues and diluted EPS in the third quarter of 2026?",
+      "tickers": [
+        "TXN"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "TXN"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r10",
+      "query_en": "What was NVIDIA's data center revenue in the second quarter of fiscal year 2027?",
+      "tickers": [
+        "NVDA"
+      ],
+      "period": {
+        "year": 2027,
+        "quarter": 2,
+        "fiscal": true
+      },
+      "filters": {
+        "ticker": [
+          "NVDA"
+        ]
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r11",
+      "query_en": "How much did NVIDIA incur in costs due to American export restrictions to China?",
+      "tickers": [
+        "NVDA"
+      ],
+      "period": null,
+      "filters": {
+        "ticker": [
+          "NVDA"
+        ]
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r12",
+      "query_en": "What is TSMC's gross margin for the third quarter of 2026?",
+      "tickers": [
+        "TSM"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "TSM"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r13",
+      "query_en": "What revenue forecast does TSMC promise for the fourth quarter of 2026?",
+      "tickers": [
+        "TSM"
+      ],
+      "period": null,
+      "filters": {
+        "ticker": [
+          "TSM"
+        ]
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r14",
+      "query_en": "What was the revenue share of TSMC's HPC segment in the third quarter of 2026?",
+      "tickers": [
+        "TSM"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "TSM"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r15",
+      "query_en": "How many employees did JPMorgan Chase have at the end of 2025?",
+      "tickers": [
+        "JPM"
+      ],
+      "period": {
+        "year": 2025,
+        "quarter": null,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "JPM"
+        ],
+        "period_from": "2025-12-31",
+        "period_to": "2026-03-16"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r16",
+      "query_en": "What does Tesla report about Cybertruck in the third quarter of 2026?",
+      "tickers": [
+        "TSLA"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "TSLA"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r17",
+      "query_en": "What was Wells Fargo's net income in the third quarter of 2026?",
+      "tickers": [
+        "WFC"
+      ],
+      "period": {
+        "year": 2026,
+        "quarter": 3,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "WFC"
+        ],
+        "period_from": "2026-09-30",
+        "period_to": "2026-12-14"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    },
+    {
+      "id": "r18",
+      "query_en": "What were ASML's sales for 2025?",
+      "tickers": [
+        "ASML"
+      ],
+      "period": {
+        "year": 2025,
+        "quarter": null,
+        "fiscal": false
+      },
+      "filters": {
+        "ticker": [
+          "ASML"
+        ],
+        "period_from": "2025-12-31",
+        "period_to": "2026-03-16"
+      },
+      "error": null,
+      "tickers_ok": true,
+      "keeps_answer": true
+    }
+  ]
+}

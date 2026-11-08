@@ -62,8 +62,9 @@ class LLMClient:
                              timeout=provider_cfg.get("timeout_s", timeout_s), max_retries=0)
 
     def extract(self, system_prompt: str, text: str, temperature: float, top_p: float,
-                history: list[dict] | None = None) -> CallResult:
-        """history: extra turns after the text, e.g. a bad answer and a request to fix it."""
+                history: list[dict] | None = None, schema: dict | None = None) -> CallResult:
+        """history: extra turns after the text, e.g. a bad answer and a request to fix it.
+        schema: response_format JSON schema, the PostCard one by default."""
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": text},
@@ -75,7 +76,7 @@ class LLMClient:
         for attempt in range(1, self.max_retries + 2):
             result.attempts = attempt
             try:
-                content, usage = self._call(messages, temperature, top_p, extra)
+                content, usage = self._call(messages, temperature, top_p, extra, schema or json_schema())
             except RETRYABLE as e:
                 result.error = f"{type(e).__name__}: {e}"
                 if attempt > self.max_retries:
@@ -96,7 +97,8 @@ class LLMClient:
         result.latency_s = round(time.perf_counter() - start, 3)
         return result
 
-    def _call(self, messages: list[dict], temperature: float, top_p: float, extra: dict | None):
+    def _call(self, messages: list[dict], temperature: float, top_p: float, extra: dict | None,
+              schema: dict):
         """One streamed request. Returns (content, usage)."""
         start = time.perf_counter()
         stream = self.client.chat.completions.create(
@@ -105,7 +107,7 @@ class LLMClient:
             temperature=temperature,
             top_p=top_p,
             max_tokens=self.max_tokens,
-            response_format={"type": "json_schema", "json_schema": json_schema()},
+            response_format={"type": "json_schema", "json_schema": schema},
             stream=True,
             stream_options={"include_usage": True},  # usage arrives in the last chunk
             extra_body=extra,
