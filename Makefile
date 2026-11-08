@@ -1,4 +1,4 @@
-.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval
+.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval ask answers-sample
 
 # Start containers (python + ollama)
 up:
@@ -46,6 +46,14 @@ index: up
 # HW2: recall@k / MRR for vector, BM25, hybrid, hybrid+rerank on both chunkings
 eval-retrieval: up
 	docker compose exec python python -m evals.retrieval_eval
+
+# HW2: answer one question with sources: make ask Q="Какая грос маргин TSMC в третьем квартале 2026 года?"
+ask: up
+	docker compose exec python python -m rag.answer "$(Q)"
+
+# HW2: all retrieval questions through the RAG pipeline -> evals/results/answers_sample_<prompt>.md
+answers-sample: up
+	docker compose exec python python -m rag.answer --sample
 
 down:
 	docker compose down

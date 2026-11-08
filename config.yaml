@@ -55,3 +55,10 @@ runs:
 rewrite:
   run: gpt4o_mini_t0
   prompt_version: rewrite_v1   # v2 tried and rejected, see prompts/CHANGELOG.md
+
+# HW2 answers (rag/answer.py): retrieval + grounded answer with citations
+answer:
+  run: gpt4o_mini_t0
+  prompt_version: answer_v2
+  k: 8                    # chunks after reranking
+  context_budget: 3000    # max tokens of sources in the prompt (o200k_base, gpt-4o tokenizer)

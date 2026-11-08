@@ -82,6 +82,18 @@ def period_range(period: dict | None) -> tuple[str, str] | None:
     return end.isoformat(), (end + timedelta(days=REPORT_LAG_DAYS)).isoformat()
 
 
+def load_config() -> dict:
+    load_dotenv(ROOT / ".env")
+    return yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+
+
+def make_client(cfg: dict, run_cfg: dict) -> LLMClient:
+    provider = run_cfg["provider"]
+    return LLMClient(provider, cfg["providers"][provider], run_cfg["model"],
+                     cfg["timeout_s"], cfg["max_retries"], cfg["backoff_base_s"],
+                     cfg.get("max_tokens"), cfg.get("deadline_s", 120))
+
+
 def corpus_companies() -> str:
     """'- JPM: JPMORGAN CHASE & CO' lines, from the chunks, so the prompt follows the corpus."""
     names: dict[str, str] = {}
@@ -93,8 +105,7 @@ def corpus_companies() -> str:
 
 class Rewriter:
     def __init__(self, prompt_version: str | None = None, run: str | None = None, cache: Path = CACHE):
-        load_dotenv(ROOT / ".env")
-        cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+        cfg = load_config()
         self.prompt_version = prompt_version or cfg["rewrite"]["prompt_version"]
         self.run_cfg = cfg["runs"][run or cfg["rewrite"]["run"]]
         self.cfg = cfg
@@ -116,10 +127,7 @@ class Rewriter:
     def client(self) -> LLMClient:
         # created on the first cache miss: a fully cached run needs no API key
         if self._client is None:
-            provider = self.run_cfg["provider"]
-            self._client = LLMClient(provider, self.cfg["providers"][provider], self.run_cfg["model"],
-                                     self.cfg["timeout_s"], self.cfg["max_retries"], self.cfg["backoff_base_s"],
-                                     self.cfg.get("max_tokens"), self.cfg.get("deadline_s", 120))
+            self._client = make_client(self.cfg, self.run_cfg)
         return self._client
 
     def rewrite(self, question: str) -> Rewrite:

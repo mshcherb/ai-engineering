@@ -46,3 +46,18 @@ Note: the fix was prompted by an error on a test question (r16), so the gain on 
 - r16 is still "Cybertruck": gpt-4o-mini ignores the rule for a product it knows much better than "Cybercab".
 - r13 broke: "прогноз на Q4 2026" now gets period Q4 2026 (v1: null), the date filter drops the Q3 report that holds the forecast. A longer prompt shifted the model on a rule that had nothing to do with the change.
 Lesson: a prompt change is checked on the whole set, not only on the question it targets. A safer fix for both is in code, not in the prompt (step 3): retry without the period filter when the filtered search returns nothing, and pass the original Russian question to the answering model.
+
+# HW2: answer prompts (`rag/answer.py`)
+
+## answer_v1 — 2026-11-08
+Answer only from the retrieved chunks, in Russian, structured output `{found, answer, citations}`. Based on the lesson 9 `v2` system prompt, adapted to filings:
+- A label `[Sn]` after **every** claim (the assignment asks for a source per statement); the code checks the labels and renders them as "document + section".
+- `found: false` with a short "what is missing" when the sources do not answer; the code then shows the fixed "не знаю" text. Similar metric or another period is explicitly not an answer (version traps: Q2 vs Q3 releases, 10-K 2024 vs 2025).
+- The release date vs quarter rule: the `period` of a US earnings release is its release date.
+- Numbers copied as written, no computed numbers without cited inputs; product names in Latin letters (lesson from rewrite_v1: «Киберкаб» → "Cybertruck").
+
+## answer_v2 — 2026-11-08
+Errors of v1 on the 20 retrieval questions (`evals/results/answers_sample_answer_v1.md`, 17/18 answered, 2/2 "не знаю" right):
+- **r04 "$ 18,679 млн"** (should be $18.68 billion): the v1 rule "$50.2 billion → $50,2 млрд" made the model mix English and Russian separators, so a number read as 18.7 *million*. v2: numbers stay in the source's format ("$18,679 million"), no unit conversion, no separator swap.
+- **r03 "нет данных о CET1"** although the chunk was S1: a flattened table row (`label footnote Std. value | Adv. value`) looked like "not the metric". v2 explains the flattened-table format with a made-up example (net interest margin), not the test row.
+- **r16** a fact sentence without a label (one label at the end of two sentences). v2: the label goes after every sentence with a fact, repeated if needed.
