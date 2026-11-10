@@ -13,7 +13,7 @@
     "Reported revenue of $50.2 billion"
   ],
   "note": "Q2 release says $57.3 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r02",
@@ -30,7 +30,7 @@
     "Reported revenue of $57.3 billion"
   ],
   "note": "Q3 release says $50.2 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r03",
@@ -47,7 +47,7 @@
     "Std. 13.9%"
   ],
   "note": "every bank reports a CET1 ratio",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r04",
@@ -65,7 +65,7 @@
     "Net revenues were $ 18.68 billion"
   ],
   "note": "GS Q2 release has its own net revenues",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r05",
@@ -83,7 +83,7 @@
     "Citigroup net income was $5.2 billion"
   ],
   "note": "five banks report net income",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r06",
@@ -100,7 +100,7 @@
     "Consumer Banking • Net income of $3.5 billion"
   ],
   "note": "",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r07",
@@ -118,7 +118,7 @@
     "AWS segment sales increased 39% year-over-year to $46.0 billion"
   ],
   "note": "",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r08",
@@ -135,7 +135,7 @@
     "Revenue of $54.23 billion"
   ],
   "note": "fiscal Q4 2026 = June-August 2026 (FY ended Sept 3, 2026); full fiscal year revenue is $133.19 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r09",
@@ -153,7 +153,7 @@
     "revenue of $6.06 billion, net income of $2.43 billion and earnings per share of $2.62"
   ],
   "note": "",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r10",
@@ -171,7 +171,7 @@
     "Second-quarter revenue was $89.0 billion"
   ],
   "note": "fiscal Q2 2027 = May-July 2026 (NVIDIA fiscal year ends in late January)",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r11",
@@ -188,7 +188,7 @@
     "$4.5 billion charge in the first quarter of fiscal year 2026 associated with H20"
   ],
   "note": "H20 export license requirement (April 2025); the $4.5B charge is in Item 1 and MD&A",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r12",
@@ -206,7 +206,7 @@
     "Gross margin was 66.4%"
   ],
   "note": "Q2 report has another margin",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r13",
@@ -226,7 +226,7 @@
     "US$52.3 billion"
   ],
   "note": "guidance is a range: US$52.3-54.3 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r14",
@@ -246,7 +246,7 @@
     "High Performance Computing 68%"
   ],
   "note": "Q2 report says HPC 66%",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r15",
@@ -263,7 +263,7 @@
     "318,512 employees"
   ],
   "note": "2024 10-K says 317,233",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r16",
@@ -279,7 +279,7 @@
     "Launched Cybercab into the Robotaxi fleet in Austin"
   ],
   "note": "the word Cybercab alone is in many chunks and in the 10-K",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r17",
@@ -296,7 +296,7 @@
     "Net Income of $6.0 billion"
   ],
   "note": "five banks report Q3 2026 net income on the same days",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r18",
@@ -314,7 +314,7 @@
     "to € 32.7 billion in 2025"
   ],
   "note": "2024 was €28.3bn; 2026 guidance €34–39bn is in the same report",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r19",
@@ -325,7 +325,7 @@
   "docs": [],
   "evidence": [],
   "note": "Apple is not in the corpus; 'Apple Card' appears in JPM and GS filings",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r20",
@@ -336,7 +336,7 @@
   "docs": [],
   "evidence": [],
   "note": "only the 2025 annual report of ASML is in the corpus",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r21",
@@ -353,7 +353,7 @@
     "Net revenues were $58.28 billion for 2025"
   ],
   "note": "2024 10-K says $53.51 billion for 2024",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r22",
@@ -370,7 +370,7 @@
     "Gross margin was 67.7%"
   ],
   "note": "Q3 report says 66.4%",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r23",
@@ -387,7 +387,7 @@
     "Consumer Banking • Net income of $3.3 billion"
   ],
   "note": "Q3 release says $3.5 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r24",
@@ -405,7 +405,7 @@
     "Revenue of $133.19 billion"
   ],
   "note": "the same release has Q4 revenue $54.23 billion",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r25",
@@ -423,7 +423,7 @@
     "between €34 billion and €39 billion"
   ],
   "note": "the 2025 actual is €32.7bn",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r26",
@@ -438,7 +438,7 @@
     "We have never declared or paid cash dividends"
   ],
   "note": "yes/no question: only the judge can score it",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r27",
@@ -449,7 +449,7 @@
   "docs": [],
   "evidence": [],
   "note": "4Q26 appears only as a column of macro assumptions in the 10-K",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r28",
@@ -460,7 +460,7 @@
   "docs": [],
   "evidence": [],
   "note": "Intel is named in the NVIDIA 10-K, without its revenue",
-  "reviewed": false
+  "reviewed": true
 }
 {
   "id": "r29",
@@ -471,5 +471,5 @@
   "docs": [],
   "evidence": [],
   "note": "Musk is mentioned in the Tesla 10-K, no share sales",
-  "reviewed": false
+  "reviewed": true
 }
