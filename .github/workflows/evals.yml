@@ -1,0 +1,64 @@
+# HW2 evals on every push and pull request: the testset through the RAG pipeline, deterministic
+# scores + LLM judge, and a gate (evals/baseline.json) that fails the run when quality drops.
+# Needs the OPENROUTER_API_KEY secret: Settings -> Secrets and variables -> Actions.
+# Cost of one run: ~$0.03 (29 answers by gpt-4o-mini + judge claude-haiku-5.5; rewrites come from the committed cache).
+name: evals
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: evals-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # embedding + reranker models (~210 MB); the chunk embeddings themselves are committed
+      - uses: actions/cache@v4
+        with:
+          path: .models
+          key: fastembed-${{ hashFiles('rag/index.py', 'rag/search.py') }}
+
+      - name: Lint the testset (no key, no cost)
+        run: python -m evals.testset
+
+      - name: Check the API key
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::OPENROUTER_API_KEY secret is not set (Settings -> Secrets and variables -> Actions)"
+            exit 1
+          fi
+
+      - name: Answers, judge and the gate
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python -m evals.answer_eval --judge --gate
+
+      - name: Report to the job summary
+        if: always()
+        run: test -f evals/results/answers.md && cat evals/results/answers.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-report
+          path: |
+            evals/results/answers.md
+            evals/results/answers.json
+            evals/results/answers.jsonl

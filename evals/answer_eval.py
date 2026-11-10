@@ -3,6 +3,7 @@
     python -m evals.answer_eval              # 29 questions through RAG -> evals/results/answers.{jsonl,md,json}
     python -m evals.answer_eval --rescore    # score the saved answers again, no model calls
     python -m evals.answer_eval --judge      # + LLM judge: correct vs the reference, grounded in the cited sources
+    python -m evals.answer_eval --judge --gate   # exit 1 if a metric is below evals/baseline.json (CI)
 
 Scores of one answer (None when the score does not apply to the case):
     source         an expected document among the cited chunks
@@ -24,6 +25,7 @@ from evals.testset import load_testset
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "evals" / "results"
 ANSWERS = OUT / "answers.jsonl"
+BASELINE = ROOT / "evals" / "baseline.json"
 METRICS = ["pass", "source", "facts", "abstain", "false_abstain", "judge_correct", "grounded"]
 
 
@@ -85,6 +87,18 @@ def add_judge(rows: list[dict], cases: list[dict]) -> float:
     return judge.cost_usd
 
 
+def gate(metrics: dict, baseline: dict) -> list[str]:
+    """Metrics outside the limits of the baseline; an empty list means the gate is green.
+    A metric that was not measured (e.g. no --judge) fails too: a gate must not pass by skipping."""
+    failures = []
+    for bound, ok in (("min", lambda v, lim: v >= lim), ("max", lambda v, lim: v <= lim)):
+        for name, lim in baseline.get(bound, {}).items():
+            value = metrics.get(name)
+            if value is None or not ok(value, lim):
+                failures.append(f"{name} = {value}, {bound} {lim}")
+    return failures
+
+
 def report(rows: list[dict], metrics: dict, prompt: str) -> str:
     def pct(v):
         return "—" if v is None else f"{v:.2f}"
@@ -111,6 +125,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--rescore", action="store_true", help="score evals/results/answers.jsonl, no RAG calls")
     parser.add_argument("--judge", action="store_true", help="add the LLM judge scores (correct, grounded)")
+    parser.add_argument("--gate", action="store_true", help="exit 1 if a metric is outside evals/baseline.json")
     args = parser.parse_args()
     cases = load_testset()
     if args.rescore:
@@ -129,6 +144,11 @@ def main() -> None:
     (OUT / "answers.md").write_text(report(rows, metrics, results[0]["prompt"]), encoding="utf-8")
     print(json.dumps({k: v for k, v in metrics.items() if k != "by_type"}, ensure_ascii=False))
     print(f"-> {(OUT / 'answers.md').relative_to(ROOT)}")
+    if args.gate:
+        failures = gate(metrics, json.loads(BASELINE.read_text(encoding="utf-8")))
+        print("gate: OK" if not failures else "gate: FAILED\n  " + "\n  ".join(failures))
+        if failures:
+            raise SystemExit(1)
 
 
 if __name__ == "__main__":

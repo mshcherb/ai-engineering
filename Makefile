@@ -1,4 +1,4 @@
-.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval ask answers-sample lint-testset eval-answers
+.PHONY: up run run-sample eval compare data check down corpus ingest index eval-retrieval ask answers-sample lint-testset eval-answers eval-ci calibrate
 
 # Start containers (python + ollama)
 up:
@@ -62,6 +62,15 @@ lint-testset: up
 # HW2: testset through RAG -> evals/results/answers.{jsonl,json,md}; ARGS=--rescore scores saved answers for free
 eval-answers: up
 	docker compose exec python python -m evals.answer_eval $(ARGS)
+
+# HW2: what CI runs (.github/workflows/evals.yml): answers + LLM judge + the gate from evals/baseline.json
+eval-ci: up
+	docker compose exec python python -m evals.testset
+	docker compose exec python python -m evals.answer_eval --judge --gate
+
+# HW2: judge vs hand labels (evals/labels.jsonl); ARGS="--run gpt4o_mini_t0 --grounded-prompt judge_grounded_v3"
+calibrate: up
+	docker compose exec python python -m evals.judge --calibrate $(ARGS)
 
 down:
 	docker compose down
