@@ -2,6 +2,7 @@
 
     python -m evals.answer_eval              # 29 questions through RAG -> evals/results/answers.{jsonl,md,json}
     python -m evals.answer_eval --rescore    # score the saved answers again, no model calls
+    python -m evals.answer_eval --judge      # + LLM judge: correct vs the reference, grounded in the cited sources
 
 Scores of one answer (None when the score does not apply to the case):
     source         an expected document among the cited chunks
@@ -9,6 +10,8 @@ Scores of one answer (None when the score does not apply to the case):
     abstain        no_answer case: the bot said "не знаю"
     false_abstain  answerable case: the bot said "не знаю" anyway
     pass           answerable: found, source and facts; no_answer: abstain
+    judge_correct  (--judge) the judge compares the answer with the reference
+    grounded       (--judge) every claim of a given answer is in its cited chunks (faithfulness)
 """
 import argparse
 import json
@@ -21,7 +24,7 @@ from evals.testset import load_testset
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "evals" / "results"
 ANSWERS = OUT / "answers.jsonl"
-METRICS = ["pass", "source", "facts", "abstain", "false_abstain"]
+METRICS = ["pass", "source", "facts", "abstain", "false_abstain", "judge_correct", "grounded"]
 
 
 def doc_of(chunk_id: str) -> str:
@@ -50,10 +53,11 @@ def aggregate(rows: list[dict]) -> dict:
     costs = [row["cost_usd"] for row in rows]
     latency = sorted(row["latency_s"] for row in rows)
     return {"n": len(rows),
-            **{m: rate([row["scores"][m] for row in rows]) for m in METRICS},
+            **{m: rate([row["scores"].get(m) for row in rows]) for m in METRICS},
             "by_type": {t: {"n": len(rs), "pass": rate([r["scores"]["pass"] for r in rs])} for t, rs in sorted(by_type.items())},
             "failed": [row["id"] for row in rows if not row["scores"]["pass"]],
             "cost_per_1000_usd": round(1000 * sum(costs) / len(costs), 3),
+            "unsupported": {row["id"]: row["unsupported"] for row in rows if row.get("unsupported")},
             "latency_p50_s": latency[len(latency) // 2]}
 
 
@@ -68,27 +72,45 @@ def run(cases: list[dict]) -> list[dict]:
     return results
 
 
+def add_judge(rows: list[dict], cases: list[dict]) -> float:
+    """Judge scores into row["scores"]; returns the judge's cost."""
+    from evals.judge import Judge, chunk_texts
+    judge, texts = Judge(), chunk_texts()
+    by_id = {c["id"]: c for c in cases}
+    for row in rows:
+        row["scores"]["judge_correct"], row["judge_reason"] = judge.correct(by_id[row["id"]], row["answer"])
+        if row["found"]:
+            row["scores"]["grounded"], row["unsupported"] = judge.grounded(row["answer"], [texts[c] for c in row["cited"]])
+        print(f"{row['id']} judge_correct={row['scores']['judge_correct']} grounded={row['scores'].get('grounded')}", flush=True)
+    return judge.cost_usd
+
+
 def report(rows: list[dict], metrics: dict, prompt: str) -> str:
     def pct(v):
         return "—" if v is None else f"{v:.2f}"
     lines = [f"# Answers ({prompt}): {metrics['n']} questions\n",
-             "| pass | source | facts | abstain | false abstain | cost / 1000 q | p50, s |", "|---|---|---|---|---|---|---|",
+             "| pass | source | facts | abstain | false abstain | judge correct | grounded | cost / 1000 q | p50, s |",
+             "|---|---|---|---|---|---|---|---|---|",
              f"| {pct(metrics['pass'])} | {pct(metrics['source'])} | {pct(metrics['facts'])} | {pct(metrics['abstain'])} "
-             f"| {pct(metrics['false_abstain'])} | ${metrics['cost_per_1000_usd']} | {metrics['latency_p50_s']} |",
+             f"| {pct(metrics['false_abstain'])} | {pct(metrics['judge_correct'])} | {pct(metrics['grounded'])} "
+             f"| ${metrics['cost_per_1000_usd']} | {metrics['latency_p50_s']} |",
              "\n## By type\n", "| type | n | pass |", "|---|---|---|"]
     lines += [f"| {t} | {v['n']} | {pct(v['pass'])} |" for t, v in metrics["by_type"].items()]
-    lines += ["\n## Every answer\n", "| id | type | pass | source | facts | answer |", "|---|---|---|---|---|---|"]
+    lines += ["\n## Every answer\n", "| id | type | pass | source | facts | judge | grounded | answer |",
+              "|---|---|---|---|---|---|---|---|"]
     mark = {True: "✓", False: "✗", None: "—"}
     for row in rows:
         s = row["scores"]
         lines.append(f"| {row['id']} | {row['type']} | {mark[s['pass']]} | {mark[s['source']]} | {mark[s['facts']]} "
+                     f"| {mark[s.get('judge_correct')]} | {mark[s.get('grounded')]} "
                      f"| {row['answer'].replace('|', '/').replace(chr(10), ' ')} |")
     return "\n".join(lines) + "\n"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--rescore", action="store_true", help="score evals/results/answers.jsonl, no model calls")
+    parser.add_argument("--rescore", action="store_true", help="score evals/results/answers.jsonl, no RAG calls")
+    parser.add_argument("--judge", action="store_true", help="add the LLM judge scores (correct, grounded)")
     args = parser.parse_args()
     cases = load_testset()
     if args.rescore:
@@ -99,6 +121,9 @@ def main() -> None:
         ANSWERS.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in results), encoding="utf-8")
     by_id = {r["id"]: r for r in results}
     rows = [{**by_id[c["id"]], "type": c["type"], "scores": score(by_id[c["id"]], c)} for c in cases]
+    if args.judge:
+        judge_cost = add_judge(rows, cases)
+        print(f"judge cost ${judge_cost:.4f}")
     metrics = aggregate(rows)
     (OUT / "answers.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
     (OUT / "answers.md").write_text(report(rows, metrics, results[0]["prompt"]), encoding="utf-8")

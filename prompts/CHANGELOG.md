@@ -61,3 +61,21 @@ Errors of v1 on the 20 retrieval questions (`evals/results/answers_sample_answer
 - **r04 "$ 18,679 млн"** (should be $18.68 billion): the v1 rule "$50.2 billion → $50,2 млрд" made the model mix English and Russian separators, so a number read as 18.7 *million*. v2: numbers stay in the source's format ("$18,679 million"), no unit conversion, no separator swap.
 - **r03 "нет данных о CET1"** although the chunk was S1: a flattened table row (`label footnote Std. value | Adv. value`) looked like "not the metric". v2 explains the flattened-table format with a made-up example (net interest margin), not the test row.
 - **r16** a fact sentence without a label (one label at the end of two sentences). v2: the label goes after every sentence with a fact, repeated if needed.
+
+# HW2: judge prompts (`evals/judge.py`)
+
+Calibrated on 18 answers labelled by hand (`evals/labels.jsonl`: 9 bot answers + 9 edited ones; correct 18, grounded 15, "не знаю" has no claims): `python -m evals.judge --calibrate --run <run> --correct-prompt ... --grounded-prompt ...`. Results in `evals/results/calibration_*.md`.
+
+| judge model | prompts | correct | grounded | notes |
+|---|---|---|---|---|
+| gpt-4o-mini | v1 / v1 | 0.89 | 0.93 | false fail l06, l07 (units / rounding: "€32,667.3 million" ≠ "€32.7 billion"); **false pass l06** grounded (a real number of another line) |
+| gpt-4o-mini | v2 / v2 | 0.83 | 0.93 | the units rule did not help, and l04 broke (answer without EPS passed): a longer prompt shifts a small model |
+| claude-haiku-5.5 | v1 / v1 | 1.00 | 0.93, 0.87, 0.87 | 3 runs; disagreements only false fails: l13 "$6,055 миллиарда" (Russian decimal comma), l10 (paraphrase) |
+| claude-haiku-5.5 | v1 / v3 | 1.00 | 0.93, 0.87, 0.87, 0.93 | same as v1 within the run-to-run noise |
+
+- judge_correct_v1, judge_grounded_v1 — 2026-11-08: correct = key fact of the reference, another period/segment is incorrect; grounded = claims only from the answer, a detail is a claim of its own, the source header (document, period, section) is passed with the chunk text.
+- judge_correct_v2 — compare numbers by value after unit conversion, the reference is rounded (made-up examples). No gain.
+- judge_grounded_v2 — "a number belongs to its line" (metric, segment, period). No gain on gpt-4o-mini; haiku catches l06 without it.
+- judge_grounded_v3 — v2 + Russian decimal comma rule. Within noise of v1.
+
+**Chosen: claude-haiku-5.5 + judge_correct_v1 + judge_grounded_v1** (simplest prompts, v2/v3 gave no measured gain). Another family than the bot (gpt-4o-mini) also avoids a model grading itself. Its errors are false fails (stricter than a person), never false passes on this set.

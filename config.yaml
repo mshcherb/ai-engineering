@@ -40,6 +40,11 @@ runs:
     model: openai/gpt-4o-mini
     temperature: 0.7
     top_p: 0.9
+  haiku55_t0:              # HW2 judge: another model family than the bot (gpt-4o-mini)
+    provider: openrouter
+    model: anthropic/claude-haiku-5.5
+    temperature: 0.0
+    top_p: 1.0
   llama32_3b_t0:
     provider: ollama
     model: llama3.2:3b
@@ -62,3 +67,9 @@ answer:
   prompt_version: answer_v2
   k: 8                    # chunks after reranking
   context_budget: 3000    # max tokens of sources in the prompt (o200k_base, gpt-4o tokenizer)
+
+# HW2 LLM as a judge (evals/judge.py): calibrated on evals/labels.jsonl, see prompts/CHANGELOG.md
+judge:
+  run: haiku55_t0          # gpt-4o-mini agreed 0.89 / 0.93 and passed a wrong answer; haiku 1.00 / ~0.9, no false passes
+  correct_prompt: judge_correct_v1
+  grounded_prompt: judge_grounded_v1

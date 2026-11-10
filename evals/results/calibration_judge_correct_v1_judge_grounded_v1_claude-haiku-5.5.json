@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "correct": {
+      "n": 18,
+      "agreement": 1.0,
+      "false_pass": 0.0,
+      "false_fail": 0.0,
+      "disagreements": []
+    },
+    "grounded": {
+      "n": 15,
+      "agreement": 0.867,
+      "false_pass": 0.0,
+      "false_fail": 0.133,
+      "disagreements": [
+        "l10",
+        "l13"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "l01",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The reference gives 318,512 employees at end of 2025; the answer gives 317,233, a different value, so the key fact does not match.",
+      "judge_grounded": false,
+      "unsupported": [
+        "На конец 2025 года у JPMorgan Chase было 317,233 сотрудника"
+      ]
+    },
+    {
+      "id": "l02",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact is Data Center revenue of $89.0 billion for Q2 FY2027; the answer states the same $89.0 billion figure for the same segment and period, with an extra growth detail that is not contradicted.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l03",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "Reference gives Q3 2026 reported revenue of $50.2 billion; the answer states $57.3 billion, a different value, so the key fact does not match.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Выручка JPMorgan в третьем квартале 2026 года составила $57.3 billion"
+      ]
+    },
+    {
+      "id": "l04",
+      "human_correct": false,
+      "human_grounded": true,
+      "judge_correct": false,
+      "correct_reason": "The reference gives revenue of $6.06 billion and EPS of $2.62 for Q3 2026; the answer gives revenue of $6,055 million, which rounds to $6.06 billion and matches. The answer omits EPS, but the question asks for revenue and EPS, so the answer is incomplete on the second key fact.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l05",
+      "human_correct": true,
+      "human_grounded": null,
+      "judge_correct": true,
+      "correct_reason": "The reference says the documents do not contain the answer (Apple is not in the corpus), and the answer likewise states the information is not in the documents, so it matches the required 'could not find it' behavior."
+    },
+    {
+      "id": "l06",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": true,
+      "correct_reason": "The reference gives total net sales of €32.7 billion for 2025; the answer states €32,667.3 million, which rounds to €32.7 billion, so the key fact matches despite the extra details.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Продажи систем увеличились на €2.9 миллиарда"
+      ]
+    },
+    {
+      "id": "l07",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The reference gives Wells Fargo's Q3 2026 net income as $6.0 billion; the answer gives about $5.95 billion, which rounds to $6.0 billion and is the same key fact in another form.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l08",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The reference's key fact is a $4.5 billion write-down in Q1 FY2026 due to the H20 export license requirement to China; the answer gives the same $4.5 billion loss in Q1 FY2026 tied to US government requirements, matching the value and period.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l09",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The reference says the documents do not contain Q4 2026 data (latest report is Q3 2026), but the answer gives a specific Q4 2026 revenue figure of $50.2 billion, which is a claim given instead of acknowledging the answer is unavailable.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Речь идёт о выручке в четвёртом квартале 2026 года"
+      ]
+    },
+    {
+      "id": "l10",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact is that Tesla began carrying Robotaxi passengers in Cybercab in Austin on September 3, 2026 (Q3 2026). The answer states Tesla began Cybercab Robotaxi rides in Austin in Q3 2026, matching the core fact; the extra mileage detail is not contradicted by the reference.",
+      "judge_grounded": false,
+      "unsupported": [
+        "В третьем квартале 2026 года Tesla начала предоставлять поездки на Robotaxi с Киберкабами в Остине"
+      ]
+    },
+    {
+      "id": "l11",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "Reference says Tesla has never paid cash dividends and does not plan to; the answer claims Tesla pays quarterly dividends, which directly contradicts the key fact (no).",
+      "judge_grounded": false,
+      "unsupported": [
+        "Tesla выплачивает ежеквартальные дивиденды по обыкновенным акциям"
+      ]
+    },
+    {
+      "id": "l12",
+      "human_correct": true,
+      "human_grounded": null,
+      "judge_correct": true,
+      "correct_reason": "The reference says the documents do not contain Q4 2026 revenue, so the answer is correct only if it also says it could not find it; the answer states 'В документах этого нет', which matches."
+    },
+    {
+      "id": "l13",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "Reference gives revenue $6.06 billion and EPS $2.62 for Q3 2026; the answer gives revenue $6,055 billion-equivalent ($6.055 billion, which rounds to $6.06 billion) and EPS $2.62, both matching.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Выручка составила $6,055 миллиарда"
+      ]
+    },
+    {
+      "id": "l14",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact is Citigroup's Q3 2026 net income of $5.2 billion; the answer states $5.2 billion for Q3 2026, matching the reference. The extra comparison to the prior year is an additional detail not contradicted by the reference.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l15",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": true,
+      "correct_reason": "The key fact is the gross margin of 67.7% for TSMC in Q2 2026; the answer states the same 67.7% figure for that quarter, with an extra claim about the Taiwan dollar that is not contradicted by the reference.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Рост валовой маржи связан с ослаблением тайваньского доллара"
+      ]
+    },
+    {
+      "id": "l16",
+      "human_correct": false,
+      "human_grounded": null,
+      "judge_correct": false,
+      "correct_reason": "The reference gives Citigroup's Q3 2026 net income as $5.2 billion, but the answer claims the documents do not contain this figure, which is a refusal where the reference provides an answer."
+    },
+    {
+      "id": "l17",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact is the gross margin of 66.4% for Q3 2026; the answer states exactly 66.4% for Q3 2026, and the extra comparisons are additional details not contradicting the reference.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l18",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": true,
+      "correct_reason": "Reference key fact is 39% year-over-year growth of AWS sales in Q3 2026; the answer states the same 39% YoY growth (and $46.0 billion, matching the reference), so it gives the key fact. The extra operating margin detail is not contradicted by the reference.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Операционная маржа AWS составила 40%"
+      ]
+    }
+  ],
+  "cost_usd": 0.0055
+}

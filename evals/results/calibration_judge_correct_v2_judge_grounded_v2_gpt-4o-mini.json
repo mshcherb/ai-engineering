@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "correct": {
+      "n": 18,
+      "agreement": 0.833,
+      "false_pass": 0.056,
+      "false_fail": 0.111,
+      "disagreements": [
+        "l04",
+        "l06",
+        "l07"
+      ]
+    },
+    "grounded": {
+      "n": 15,
+      "agreement": 0.933,
+      "false_pass": 0.067,
+      "false_fail": 0.0,
+      "disagreements": [
+        "l06"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "l01",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is the number of employees at JPMorgan Chase at the end of 2025, which is 318,512 according to the reference and 317,233 according to the answer.",
+      "judge_grounded": false,
+      "unsupported": [
+        "На конец 2025 года у JPMorgan Chase было 317,233 сотрудника"
+      ]
+    },
+    {
+      "id": "l02",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the revenue of the Data Center segment for NVIDIA in Q2 of the 2027 fiscal year, which is stated as $89.0 billion in both the reference and the answer.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l03",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is the revenue of JPMorgan in Q3 2026, which is reported as $50.2 billion in the reference. The answer states $57.3 billion, which is a different value.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Выручка JPMorgan в третьем квартале 2026 года составила $57.3 billion"
+      ]
+    },
+    {
+      "id": "l04",
+      "human_correct": false,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the revenue for Texas Instruments in Q3 2026, which is $6.06 billion in the reference. The answer states $6,055 million, which is approximately $6.06 billion and matches the reference value.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l05",
+      "human_correct": true,
+      "human_grounded": null,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is whether the documents contain the revenue for Apple in Q3 2026. The reference states that the documents do not contain this information, and the answer correctly reflects that."
+    },
+    {
+      "id": "l06",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The reference states that ASML's sales for 2025 were €32.7 billion, while the answer provides a figure of €32,667.3 million, which is approximately €32.7 billion but does not match the rounded figure exactly as stated in the reference.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l07",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is the net income of Wells Fargo in Q3 2026, which is $6.0 billion in the reference. The answer states approximately $5.95 billion, which does not match the reference value.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l08",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the amount NVIDIA incurred due to U.S. export restrictions to China, which is $4.5 billion. Both the reference and the answer state the same amount, confirming the answer is correct.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l09",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is the revenue of JPMorgan in the fourth quarter of 2026, which the reference states is not available as the last report is for Q3 2026.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Выручка JPMorgan в четвёртом квартале 2026 года составила $50.2 billion"
+      ]
+    },
+    {
+      "id": "l10",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is that Tesla began transporting passengers with Cybercab in Austin starting September 3, 2026, which is confirmed in both the reference and the answer.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l11",
+      "human_correct": false,
+      "human_grounded": false,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is whether Tesla pays dividends. The reference states that Tesla does not pay dividends, while the answer claims that Tesla does pay dividends.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Tesla выплачивает ежеквартальные дивиденды по обыкновенным акциям"
+      ]
+    },
+    {
+      "id": "l12",
+      "human_correct": true,
+      "human_grounded": null,
+      "judge_correct": true,
+      "correct_reason": "The key fact is whether there is revenue information for JPMorgan in Q4 2026, which the reference states is not available as the last report is for Q3 2026."
+    },
+    {
+      "id": "l13",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the revenue of Texas Instruments in Q3 2026, which is $6.06 billion in the reference and approximately $6.055 billion in the answer. Both values round to the same figure, and the earnings per share of $2.62 matches exactly.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l14",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the net income of Citigroup for Q3 2026, which is stated as $5.2 billion in both the reference and the answer.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l15",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the gross margin of TSMC for Q2 2026, which is stated as 67.7% in both the reference and the answer.",
+      "judge_grounded": false,
+      "unsupported": [
+        "рост связан с ослаблением тайваньского доллара"
+      ]
+    },
+    {
+      "id": "l16",
+      "human_correct": false,
+      "human_grounded": null,
+      "judge_correct": false,
+      "correct_reason": "The key fact compared is the net income of Citigroup for Q3 2026, which is stated as $5.2 billion in the reference. The answer incorrectly claims that this information is not available, while the reference provides a clear figure."
+    },
+    {
+      "id": "l17",
+      "human_correct": true,
+      "human_grounded": true,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the gross margin of TSMC in Q3 2026, which is stated as 66.4% in both the reference and the answer.",
+      "judge_grounded": true,
+      "unsupported": []
+    },
+    {
+      "id": "l18",
+      "human_correct": true,
+      "human_grounded": false,
+      "judge_correct": true,
+      "correct_reason": "The key fact compared is the percentage increase in AWS sales year-over-year in Q3 2026, which is 39%. Both the reference and the answer provide the same percentage increase, confirming the correctness of the answer.",
+      "judge_grounded": false,
+      "unsupported": [
+        "Операционная маржа AWS составила 40%"
+      ]
+    }
+  ],
+  "cost_usd": 0.0046
+}
