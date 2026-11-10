@@ -46,7 +46,8 @@ prompts/              версії промптів + CHANGELOG.md
 data/texts.jsonl      49 знеособлених текстів (Telegram + Reddit)
 data/golden.json      15 текстів, розмічених вручну (правила — data/LABELING.md)
 results/              виходи моделей, metrics.md (таблиця), errors.md (розбіжності)
-REPORT.md             звіт-порівняння і вибір моделі
+REPORT_hw1.md         ДЗ1: звіт-порівняння і вибір моделі
+REPORT.md             ДЗ2: метрики retrieval і відповідей, калібрування judge, розбір помилок
 scripts/              збірка датасету, перевірка середовища
 ```
 
@@ -262,3 +263,19 @@ make answers-sample   # 20 питань -> evals/results/answers_sample_<prompt>
 **Відомі обмеження:**
 - **Формат чисел.** Джерела англійські (`$6,055` у таблиці «In millions»), відповідь російська: модель часом пише «$6,055 миллиарда» — по-російськи це 6.055 млрд (вірно), по-англійськи — у тисячу разів більше. Детермінований скорер на кроці 4 має нормалізувати числа, а не порівнювати рядки.
 - **Одна мітка на кілька речень** (r16): gpt-4o-mini не завжди повторює мітку, хоч промпт цього вимагає. Код це ловить (`uncited_claims`), але не виправляє.
+
+## Тестсет і evals у CI
+
+```bash
+make lint-testset    # перевірка тестсету на корпусі: документи, рядки-докази, числа з must
+make eval-answers    # 29 питань через RAG -> evals/results/answers.{jsonl,json,md}; ARGS=--rescore — без нових викликів
+make eval-ci         # те саме, що CI: lint + відповіді + LLM-judge + gate (evals/baseline.json)
+make calibrate       # judge проти ручної розмітки evals/labels.jsonl -> evals/results/calibration_*.md
+```
+
+- **Тестсет** `evals/testset.jsonl`: 29 питань — 8 фактів, 8 пасток «застаріла версія», 6 «схожі документи», 2 без чисел, 5 без відповіді в корпусі. У кожного — еталон російською, ключові числа `must`, правильні документи. Перевіряє людина (`reviewed`), `evals/testset.py` (lint) перевіряє, що все це справді є в корпусі.
+- **Детерміновані скорери** (`evals/answer_eval.py`, `evals/scoring.py`): правильне джерело серед цитат, ключові числа (порівняння за значенням, а не рядком: «$5,951 миллиона» = «$6.0 billion», «66.4%» ≠ «67.7%»), «не знаю» де треба і хибне «не знаю».
+- **LLM-judge** (`evals/judge.py`, claude-haiku-5.5): `judge_correct` — відповідь проти еталону; `grounded` (faithfulness) — кожне твердження відповіді проти процитованих чанків. Відкалібровано на 18 ручних оцінках: згода 1.00 і 0.87–0.93, жодного false pass. Чому haiku, а не gpt-4o-mini, — `prompts/CHANGELOG.md`.
+- **CI** `.github/workflows/evals.yml`: на кожен push / PR, падає нижче порогів з `evals/baseline.json`. Потрібен секрет `OPENROUTER_API_KEY` (Settings → Secrets and variables → Actions). Моделі fastembed кешуються, вектори чанків і rewrite-кеш лежать у git, тож прогін ≈ 5 хв і ≈ $0.03.
+
+Результати, калібрування і розбір помилок — у [`REPORT.md`](REPORT.md).
