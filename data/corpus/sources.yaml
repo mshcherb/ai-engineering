@@ -1,0 +1,38 @@
+# RAG corpus (HW2): public filings of companies the HW1 extractor found in investor chats.
+# scripts/fetch_corpus.py downloads them into data/corpus/raw/ and writes data/corpus/manifest.csv.
+#
+# annual:   N latest 10-K (US) or 20-F (foreign issuers), HTML from SEC EDGAR
+# earnings: N latest quarterly results press releases = exhibit 99.1 of an 8-K with item 2.02
+# Counts, not years: fiscal years differ (NVDA ends in January, MU in August).
+# pdf:      documents from company investor-relations sites (second format)
+#
+# Second-latest versions (previous 10-K, previous quarter) are kept on purpose: "outdated version" traps.
+
+companies:
+  JPM:  {cik: 19617,   annual: 2, earnings: 2}
+  GS:   {cik: 886982,  annual: 2, earnings: 2}
+  BAC:  {cik: 70858,   annual: 1, earnings: 2}
+  C:    {cik: 831001,  annual: 1, earnings: 2}
+  WFC:  {cik: 72971,   annual: 1, earnings: 1}
+  NVDA: {cik: 1045810, annual: 1, earnings: 1}
+  MU:   {cik: 723125,  annual: 1, earnings: 1}
+  TXN:  {cik: 97476,   annual: 1, earnings: 1}
+  TSLA: {cik: 1318605, annual: 1, earnings: 1}
+  AMZN: {cik: 1018724, annual: 1, earnings: 1}
+  ASML: {cik: 937966,  annual: 1}
+  TSM:  {cik: 1046179, annual: 1}
+
+# PDFs from investor-relations sites. These sites block scripted downloads, so the files are
+# saved by hand from `url` into data/corpus/raw/<file>; the script only checks and hashes them.
+# Q2 2026 next to Q3 2026: "outdated version" traps.
+# Earnings-call transcripts are NOT used: they are LSEG content and forbid redistribution,
+# while chunks.jsonl (full text) is committed to a public repository.
+pdf:
+  - {ticker: TSM, kind: management_report, period: 2026-09-30, file: TSM_management_report_2026Q3.pdf,
+     url: "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/f83780000ddc0c3b48e57a87eab6814c4ab35058/3Q26%20ManagementReport.pdf"}
+  - {ticker: TSM, kind: earnings_release, period: 2026-09-30, file: TSM_earnings_release_2026Q3.pdf,
+     url: "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf"}
+  - {ticker: TSM, kind: presentation, period: 2026-09-30, file: TSM_presentation_2026Q3.pdf,
+     url: "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/9f58506f6f114f91cefbf86820cc63297b39b130/3Q26%20Presentation%20%28E%29.pdf"}
+  - {ticker: TSM, kind: management_report, period: 2026-06-30, file: TSM_management_report_2026Q2.pdf,
+     url: "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf"}

@@ -1,0 +1,14 @@
+{
+  "_note": "CI gate (python -m evals.answer_eval --judge --gate). Last local run: pass 1.00, abstain 1.00, judge_correct 1.00, grounded 0.79. Margins cover the run-to-run noise of the bot and the judge (grounded moved 0.87-0.93 on 15 calibration answers).",
+  "min": {
+    "pass": 0.9,
+    "source": 0.9,
+    "facts": 0.9,
+    "abstain": 1.0,
+    "judge_correct": 0.9,
+    "grounded": 0.7
+  },
+  "max": {
+    "false_abstain": 0.1
+  }
+}

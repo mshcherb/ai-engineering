@@ -1,0 +1,229 @@
+{
+  "pipeline_version": "ingest-v1",
+  "documents": {
+    "JPM_annual_2025-12-31": {
+      "words": 211352,
+      "chunks": 1040,
+      "latest": true,
+      "doc_hash": "4b4a5505629c454fd00fe0d8a30d16d0505ec8bcc75fbbe4f760a6738076cb31"
+    },
+    "JPM_earnings_2026-10-13": {
+      "words": 4193,
+      "chunks": 24,
+      "latest": true,
+      "doc_hash": "b330918f05e3804fbb8283412824405a9d582aafda0e18aaf0c3959992ae9d4a"
+    },
+    "GS_annual_2025-12-31": {
+      "words": 188646,
+      "chunks": 888,
+      "latest": true,
+      "doc_hash": "52621903c5b0265d1e259d944e6c09d42ed220173d1f78a258a7567f1178a7fd"
+    },
+    "GS_earnings_2026-10-13": {
+      "words": 5263,
+      "chunks": 27,
+      "latest": true,
+      "doc_hash": "ca303bb21a053195b1939ff62fd53302d1b831f8beaca0b4b1137b2fa38dbb9f"
+    },
+    "BAC_annual_2025-12-31": {
+      "words": 159713,
+      "chunks": 803,
+      "latest": true,
+      "doc_hash": "4f59b88042c8c1986328fd3705c4baaf99eeae20f48bef404ac932ad1ebdcf16"
+    },
+    "BAC_earnings_2026-10-14": {
+      "words": 10082,
+      "chunks": 54,
+      "latest": true,
+      "doc_hash": "847092b3ad22edda7995add47d73ccd22322933cc569473f92bbed862bc1fd0e"
+    },
+    "C_annual_2025-12-31": {
+      "words": 209841,
+      "chunks": 1070,
+      "latest": true,
+      "doc_hash": "2821778d666287a0e7ad42b35218f2499b50cc44d7e1b8c1baa863bde225e6e1"
+    },
+    "C_earnings_2026-10-13": {
+      "words": 6627,
+      "chunks": 34,
+      "latest": true,
+      "doc_hash": "48c7bbc6dffc5b6107f4a2d791e827d0f50858f2d87ee07bc5daf358680cc284"
+    },
+    "WFC_annual_2025-12-31": {
+      "words": 142441,
+      "chunks": 681,
+      "latest": true,
+      "doc_hash": "5cc12cc8ce7e26a1a8e8601da3f6c158f920479ae5bd8e1e1d87a43733465a89"
+    },
+    "WFC_earnings_2026-10-13": {
+      "words": 5487,
+      "chunks": 31,
+      "latest": true,
+      "doc_hash": "051a29ff46586cb3b6dfa53f3926b666bffec74e44aeda3d5d918c2c5b8c5fda"
+    },
+    "NVDA_annual_2026-01-25": {
+      "words": 55418,
+      "chunks": 269,
+      "latest": true,
+      "doc_hash": "f31de30ef1ae18ad379129ad8a27215742a01309fa5e220b89f95b202492fbbf"
+    },
+    "NVDA_earnings_2026-08-26": {
+      "words": 4428,
+      "chunks": 23,
+      "latest": true,
+      "doc_hash": "ee340ba37aa45b3117eb570eb15170e64b4d6e633c23289408db8c979444c8c2"
+    },
+    "MU_annual_2026-09-03": {
+      "words": 58775,
+      "chunks": 271,
+      "latest": true,
+      "doc_hash": "116b5a2e525060dd2bb2c2226d9561aa048758e3f7b0860346c89bd8c0a06505"
+    },
+    "MU_earnings_2026-09-30": {
+      "words": 3913,
+      "chunks": 23,
+      "latest": true,
+      "doc_hash": "32576370420163bb77ea8c10b8c6845d0ac6d1e719676a8ea0780c54c66d09c4"
+    },
+    "TXN_annual_2025-12-31": {
+      "words": 33298,
+      "chunks": 145,
+      "latest": true,
+      "doc_hash": "c06e9d4c68560c6f616cdb103e826d78b7cc1a8ed945adb8e2334a89b07d71f3"
+    },
+    "TXN_earnings_2026-10-21": {
+      "words": 2837,
+      "chunks": 16,
+      "latest": true,
+      "doc_hash": "6b7df56e18d5aea8fc4afacdb1590d20ce6632024a4da198781ac40ed4c50b03"
+    },
+    "TSLA_annual_2025-12-31": {
+      "words": 64793,
+      "chunks": 295,
+      "latest": true,
+      "doc_hash": "b3ded1a62f47523b02773b8e474eefbe853e1838b5f03506f6522b3bc19359db"
+    },
+    "TSLA_earnings_2026-10-21": {
+      "words": 6517,
+      "chunks": 36,
+      "latest": true,
+      "doc_hash": "f66f220c36269cba4c8af6e543a348b196ce6bf91933a80dee4eae0d5b05a5ff"
+    },
+    "AMZN_annual_2025-12-31": {
+      "words": 46408,
+      "chunks": 236,
+      "latest": true,
+      "doc_hash": "250069998c43f283af06ea9761a8a100dfc033502f4feb4889064fe728a974a3"
+    },
+    "AMZN_earnings_2026-10-29": {
+      "words": 7311,
+      "chunks": 42,
+      "latest": true,
+      "doc_hash": "3fe740bc535413ea8983f5eef589ff2518860366ff175aca69dd241bfab06bc6"
+    },
+    "ASML_annual_2025-12-31": {
+      "words": 236548,
+      "chunks": 1251,
+      "latest": true,
+      "doc_hash": "b5f07e5e4073b17f3e6d1e17ac6893bb3011ff68134e46cbb309d3902f97ae13"
+    },
+    "TSM_annual_2025-12-31": {
+      "words": 101080,
+      "chunks": 496,
+      "latest": true,
+      "doc_hash": "dcdcff835a5cd471e951c2911bcb3f0000d4529a800f696876359900e1f047bf"
+    },
+    "TSM_management_report_2026Q3": {
+      "words": 1610,
+      "chunks": 17,
+      "latest": true,
+      "doc_hash": "91f09c4e9bc866db1e303c1e822d65023075ef1d8775882ab361fe5b37e61885"
+    },
+    "TSM_earnings_release_2026Q3": {
+      "words": 713,
+      "chunks": 4,
+      "latest": true,
+      "doc_hash": "fc32a2aea8bdf8129c91cccbe73c05fc1ab14a049890339b5706fad0e1579479"
+    },
+    "TSM_presentation_2026Q3": {
+      "words": 746,
+      "chunks": 9,
+      "latest": true,
+      "doc_hash": "0f4c8137193df679e95ca349ce7202bca47e0428e8589afba25117597854b1d4"
+    },
+    "JPM_annual_2024-12-31": {
+      "words": 215728,
+      "chunks": 957,
+      "latest": false,
+      "doc_hash": "739dbbe3127757047dec87b528c52fbde36fa49f245c14dabebad7a41c57e7eb"
+    },
+    "JPM_earnings_2026-07-14": {
+      "words": 4466,
+      "chunks": 25,
+      "latest": false,
+      "doc_hash": "facbbc1afcef03412f2f9f8353ccdb6b551445f8cbfc1f80ee3645b00cfbd273"
+    },
+    "GS_annual_2024-12-31": {
+      "words": 192045,
+      "chunks": 802,
+      "latest": false,
+      "doc_hash": "c190bc72f6acaf9d868d3f4baf7c46eeed1c60cd83e6421eb5c3398962f825d9"
+    },
+    "GS_earnings_2026-07-14": {
+      "words": 5317,
+      "chunks": 25,
+      "latest": false,
+      "doc_hash": "ee0bbfb76addc6c69ae5b08494ec5583b9f3f061a50c3a8d036f0186c05361c4"
+    },
+    "BAC_earnings_2026-07-14": {
+      "words": 9754,
+      "chunks": 50,
+      "latest": false,
+      "doc_hash": "e1c7a3b4293b00e6afb880283606eefc82fcf0cfb2f79adc5bc1cc4e55c95ae1"
+    },
+    "C_earnings_2026-07-14": {
+      "words": 6666,
+      "chunks": 33,
+      "latest": false,
+      "doc_hash": "c698542be4e58beb98ccc8920b2e2acb058c800d2950f9de101455b4601cfe62"
+    },
+    "TSM_management_report_2026Q2": {
+      "words": 1646,
+      "chunks": 17,
+      "latest": false,
+      "doc_hash": "384fa8579f3b6fcd3ed0511714e7e1d49ad3458f8813e8f50943cba34e5ff412"
+    }
+  },
+  "duplicates": [],
+  "versions": [
+    {
+      "a": "JPM_annual_2025-12-31",
+      "b": "JPM_annual_2024-12-31",
+      "jaccard": 0.51
+    },
+    {
+      "a": "GS_annual_2025-12-31",
+      "b": "GS_annual_2024-12-31",
+      "jaccard": 0.59
+    }
+  ],
+  "chunk_duplicates_removed": 220,
+  "chunking": {
+    "sections": {
+      "chunks": 9694,
+      "avg_tokens": 279,
+      "max_tokens": 400,
+      "starts_mid_sentence_%": 3.1,
+      "cut_table_rows_%": 0.9,
+      "with_section_%": 98.5
+    },
+    "fixed": {
+      "chunks": 7857,
+      "avg_tokens": 399,
+      "max_tokens": 400,
+      "starts_mid_sentence_%": 9.6,
+      "cut_table_rows_%": 46.0,
+      "with_section_%": 0.0
+    }
+  }
+}

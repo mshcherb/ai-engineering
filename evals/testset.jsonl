@@ -1,0 +1,475 @@
+{
+  "id": "r01",
+  "question": "Какую выручку показал JPMorgan в третьем квартале 2026 года?",
+  "type": "version_trap",
+  "reference": "Выручка JPMorgan (reported) в 3 кв. 2026 — $50.2 млрд.",
+  "must": [
+    "$50.2 billion"
+  ],
+  "docs": [
+    "JPM_earnings_2026-10-13"
+  ],
+  "evidence": [
+    "Reported revenue of $50.2 billion"
+  ],
+  "note": "Q2 release says $57.3 billion",
+  "reviewed": true
+}
+{
+  "id": "r02",
+  "question": "Какая была выручка у ЖПморган чейс во втором квартале 2026 года?",
+  "type": "version_trap",
+  "reference": "Выручка JPMorgan (reported) во 2 кв. 2026 — $57.3 млрд.",
+  "must": [
+    "$57.3 billion"
+  ],
+  "docs": [
+    "JPM_earnings_2026-07-14"
+  ],
+  "evidence": [
+    "Reported revenue of $57.3 billion"
+  ],
+  "note": "Q3 release says $50.2 billion",
+  "reviewed": true
+}
+{
+  "id": "r03",
+  "question": "Какой был сет1 у JPMorgan на конец третьего квартала 2026 года?",
+  "type": "similar_docs",
+  "reference": "CET1 JPMorgan (standardized) на конец 3 кв. 2026 — 13.9%.",
+  "must": [
+    "13.9%"
+  ],
+  "docs": [
+    "JPM_earnings_2026-10-13"
+  ],
+  "evidence": [
+    "Std. 13.9%"
+  ],
+  "note": "every bank reports a CET1 ratio",
+  "reviewed": true
+}
+{
+  "id": "r04",
+  "question": "Сколько составила чистая выручка Голдман сакс в третьем квартале 2026 года?",
+  "type": "similar_docs",
+  "reference": "Чистая выручка Goldman Sachs в 3 кв. 2026 — $18.68 млрд.",
+  "must": [
+    "$18.68 billion"
+  ],
+  "docs": [
+    "GS_earnings_2026-10-13"
+  ],
+  "evidence": [
+    "net revenues of $ 18.68 billion",
+    "Net revenues were $ 18.68 billion"
+  ],
+  "note": "GS Q2 release has its own net revenues",
+  "reviewed": true
+}
+{
+  "id": "r05",
+  "question": "Третий квартал 2026 года какая чистая прибыль у читигруп по их отчету?",
+  "type": "similar_docs",
+  "reference": "Чистая прибыль Citigroup в 3 кв. 2026 — $5.2 млрд.",
+  "must": [
+    "$5.2 billion"
+  ],
+  "docs": [
+    "C_earnings_2026-10-13"
+  ],
+  "evidence": [
+    "net income for the third quarter 2026 of $5.2 billion",
+    "Citigroup net income was $5.2 billion"
+  ],
+  "note": "five banks report net income",
+  "reviewed": true
+}
+{
+  "id": "r06",
+  "question": "Какая чистая прибыль была у Консьюмер банкинга банка BoA в 3 квартале 2026?",
+  "type": "similar_docs",
+  "reference": "Чистая прибыль сегмента Consumer Banking Bank of America в 3 кв. 2026 — $3.5 млрд.",
+  "must": [
+    "$3.5 billion"
+  ],
+  "docs": [
+    "BAC_earnings_2026-10-14"
+  ],
+  "evidence": [
+    "Consumer Banking • Net income of $3.5 billion"
+  ],
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r07",
+  "question": "На сколько выросли продажи AWS по сравнению с прошлым годом в третьем квартале 26го?",
+  "type": "fact",
+  "reference": "Продажи AWS в 3 кв. 2026 выросли на 39% год к году, до $46.0 млрд.",
+  "must": [
+    "39%",
+    "$46.0 billion"
+  ],
+  "docs": [
+    "AMZN_earnings_2026-10-29"
+  ],
+  "evidence": [
+    "AWS segment sales increased 39% year-over-year to $46.0 billion"
+  ],
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r08",
+  "question": "Какую выручку микрон показал за четвёртый квартал 2026 финансового года?",
+  "type": "fact",
+  "reference": "Выручка Micron за 4 кв. 2026 финансового года — $54.23 млрд.",
+  "must": [
+    "$54.23 billion"
+  ],
+  "docs": [
+    "MU_earnings_2026-09-30"
+  ],
+  "evidence": [
+    "Revenue of $54.23 billion"
+  ],
+  "note": "fiscal Q4 2026 = June-August 2026 (FY ended Sept 3, 2026); full fiscal year revenue is $133.19 billion",
+  "reviewed": true
+}
+{
+  "id": "r09",
+  "question": "Какие были выручка и прибыль на акцию у Texas Instruments в третьем квартале 2026?",
+  "type": "fact",
+  "reference": "Texas Instruments в 3 кв. 2026: выручка $6.06 млрд, прибыль на акцию $2.62 (чистая прибыль $2.43 млрд).",
+  "must": [
+    "$6.06 billion",
+    "$2.62"
+  ],
+  "docs": [
+    "TXN_earnings_2026-10-21"
+  ],
+  "evidence": [
+    "revenue of $6.06 billion, net income of $2.43 billion and earnings per share of $2.62"
+  ],
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r10",
+  "question": "Какая была выручка сегмента дата центр у нвидиа во втором квартале 2027 финансового года?",
+  "type": "fact",
+  "reference": "Выручка сегмента Data Center NVIDIA во 2 кв. 2027 фин. года — $89.0 млрд.",
+  "must": [
+    "$89.0 billion"
+  ],
+  "docs": [
+    "NVDA_earnings_2026-08-26"
+  ],
+  "evidence": [
+    "Data Center revenue of $89.0 billion",
+    "Second-quarter revenue was $89.0 billion"
+  ],
+  "note": "fiscal Q2 2027 = May-July 2026 (NVIDIA fiscal year ends in late January)",
+  "reviewed": true
+}
+{
+  "id": "r11",
+  "question": "Во сколько NVIDIA обошлись американские ограничения на экспорт в Китай?",
+  "type": "fact",
+  "reference": "NVIDIA списала $4.5 млрд в 1 кв. 2026 фин. года из-за требования лицензии на экспорт H20 в Китай.",
+  "must": [
+    "$4.5 billion"
+  ],
+  "docs": [
+    "NVDA_annual_2026-01-25"
+  ],
+  "evidence": [
+    "$4.5 billion charge in the first quarter of fiscal year 2026 associated with H20"
+  ],
+  "note": "H20 export license requirement (April 2025); the $4.5B charge is in Item 1 and MD&A",
+  "reviewed": true
+}
+{
+  "id": "r12",
+  "question": "Какая грос маргин TSMC в третьем квартале 2026 года?",
+  "type": "version_trap",
+  "reference": "Валовая маржа TSMC в 3 кв. 2026 — 66.4%.",
+  "must": [
+    "66.4%"
+  ],
+  "docs": [
+    "TSM_management_report_2026Q3",
+    "TSM_earnings_release_2026Q3"
+  ],
+  "evidence": [
+    "Gross margin was 66.4%"
+  ],
+  "note": "Q2 report has another margin",
+  "reviewed": true
+}
+{
+  "id": "r13",
+  "question": "Какой прогноз выручки обещает TSMC на четвёртый квартал 2026 года?",
+  "type": "fact",
+  "reference": "TSMC ожидает выручку в 4 кв. 2026 от $52.3 до $54.3 млрд.",
+  "must": [
+    "$52.3 billion",
+    "$54.3 billion"
+  ],
+  "docs": [
+    "TSM_earnings_release_2026Q3",
+    "TSM_presentation_2026Q3",
+    "TSM_management_report_2026Q3"
+  ],
+  "evidence": [
+    "US$52.3 billion"
+  ],
+  "note": "guidance is a range: US$52.3-54.3 billion",
+  "reviewed": true
+}
+{
+  "id": "r14",
+  "question": "Какую долю выручки TSMC в третьем квартале 26-го дал сегмент HPC?",
+  "type": "version_trap",
+  "reference": "HPC дал 68% выручки TSMC в 3 кв. 2026.",
+  "must": [
+    "68%"
+  ],
+  "docs": [
+    "TSM_management_report_2026Q3",
+    "TSM_presentation_2026Q3",
+    "TSM_earnings_release_2026Q3"
+  ],
+  "evidence": [
+    "HPC and Smartphone represented 68%",
+    "High Performance Computing 68%"
+  ],
+  "note": "Q2 report says HPC 66%",
+  "reviewed": true
+}
+{
+  "id": "r15",
+  "question": "Сколько сотрудников было у JPMorgan Chase на конец 25 года?",
+  "type": "version_trap",
+  "reference": "На конец 2025 года у JPMorgan Chase было 318,512 сотрудников.",
+  "must": [
+    "318,512"
+  ],
+  "docs": [
+    "JPM_annual_2025-12-31"
+  ],
+  "evidence": [
+    "318,512 employees"
+  ],
+  "note": "2024 10-K says 317,233",
+  "reviewed": true
+}
+{
+  "id": "r16",
+  "question": "Что в отчете Tesla о Киберкаб за третий квартал 2026 года?",
+  "type": "narrative",
+  "reference": "С 3 сентября 2026 Tesla начала возить пассажиров Robotaxi на Cybercab в Остине; Cybercab добавлен во флот Robotaxi.",
+  "must": [],
+  "docs": [
+    "TSLA_earnings_2026-10-21"
+  ],
+  "evidence": [
+    "started providing Robotaxi rides using Cybercabs",
+    "Launched Cybercab into the Robotaxi fleet in Austin"
+  ],
+  "note": "the word Cybercab alone is in many chunks and in the 10-K",
+  "reviewed": true
+}
+{
+  "id": "r17",
+  "question": "Сколько сделал Wells Fargo чистыми в третьем квартале 2026?",
+  "type": "similar_docs",
+  "reference": "Чистая прибыль Wells Fargo в 3 кв. 2026 — $6.0 млрд.",
+  "must": [
+    "$6.0 billion"
+  ],
+  "docs": [
+    "WFC_earnings_2026-10-13"
+  ],
+  "evidence": [
+    "Net Income of $6.0 billion"
+  ],
+  "note": "five banks report Q3 2026 net income on the same days",
+  "reviewed": true
+}
+{
+  "id": "r18",
+  "question": "Какие были продажи ASML за 2025 год?",
+  "type": "fact",
+  "reference": "Продажи (total net sales) ASML за 2025 год — €32.7 млрд.",
+  "must": [
+    "€32.7 billion"
+  ],
+  "docs": [
+    "ASML_annual_2025-12-31"
+  ],
+  "evidence": [
+    "€32.7bn Total net sales",
+    "to € 32.7 billion in 2025"
+  ],
+  "note": "2024 was €28.3bn; 2026 guidance €34–39bn is in the same report",
+  "reviewed": true
+}
+{
+  "id": "r19",
+  "question": "Какую выручку Apple показал в третьем квартале 2026?",
+  "type": "no_answer",
+  "reference": "В документах этого нет: Apple нет в корпусе.",
+  "must": [],
+  "docs": [],
+  "evidence": [],
+  "note": "Apple is not in the corpus; 'Apple Card' appears in JPM and GS filings",
+  "reviewed": true
+}
+{
+  "id": "r20",
+  "question": "Какая выручка у ASML в третьем квартале 2026?",
+  "type": "no_answer",
+  "reference": "В документах этого нет: у ASML в корпусе только годовой отчёт за 2025.",
+  "must": [],
+  "docs": [],
+  "evidence": [],
+  "note": "only the 2025 annual report of ASML is in the corpus",
+  "reviewed": true
+}
+{
+  "id": "r21",
+  "question": "Какой была чистая выручка Goldman Sachs за 2025 год?",
+  "type": "version_trap",
+  "reference": "Чистая выручка Goldman Sachs за 2025 год — $58.28 млрд.",
+  "must": [
+    "$58.28 billion"
+  ],
+  "docs": [
+    "GS_annual_2025-12-31"
+  ],
+  "evidence": [
+    "Net revenues were $58.28 billion for 2025"
+  ],
+  "note": "2024 10-K says $53.51 billion for 2024",
+  "reviewed": true
+}
+{
+  "id": "r22",
+  "question": "Какая валовая маржа была у TSMC во втором квартале 2026 года?",
+  "type": "version_trap",
+  "reference": "Валовая маржа TSMC во 2 кв. 2026 — 67.7%.",
+  "must": [
+    "67.7%"
+  ],
+  "docs": [
+    "TSM_management_report_2026Q2"
+  ],
+  "evidence": [
+    "Gross margin was 67.7%"
+  ],
+  "note": "Q3 report says 66.4%",
+  "reviewed": true
+}
+{
+  "id": "r23",
+  "question": "Сколько заработал Consumer Banking у Bank of America во втором квартале 2026?",
+  "type": "version_trap",
+  "reference": "Чистая прибыль Consumer Banking Bank of America во 2 кв. 2026 — $3.3 млрд.",
+  "must": [
+    "$3.3 billion"
+  ],
+  "docs": [
+    "BAC_earnings_2026-07-14"
+  ],
+  "evidence": [
+    "Consumer Banking • Net income of $3.3 billion"
+  ],
+  "note": "Q3 release says $3.5 billion",
+  "reviewed": true
+}
+{
+  "id": "r24",
+  "question": "Какая выручка у Micron за весь 2026 финансовый год?",
+  "type": "similar_docs",
+  "reference": "Выручка Micron за 2026 финансовый год — $133.19 млрд.",
+  "must": [
+    "$133.19 billion"
+  ],
+  "docs": [
+    "MU_earnings_2026-09-30",
+    "MU_annual_2026-09-03"
+  ],
+  "evidence": [
+    "Revenue of $133.19 billion"
+  ],
+  "note": "the same release has Q4 revenue $54.23 billion",
+  "reviewed": true
+}
+{
+  "id": "r25",
+  "question": "Какой прогноз продаж ASML дала на 2026 год?",
+  "type": "fact",
+  "reference": "ASML ожидает продажи в 2026 году от €34 до €39 млрд (валовая маржа 51–53%).",
+  "must": [
+    "€34 billion",
+    "€39 billion"
+  ],
+  "docs": [
+    "ASML_annual_2025-12-31"
+  ],
+  "evidence": [
+    "between €34 billion and €39 billion"
+  ],
+  "note": "the 2025 actual is €32.7bn",
+  "reviewed": true
+}
+{
+  "id": "r26",
+  "question": "Платит ли Tesla дивиденды?",
+  "type": "narrative",
+  "reference": "Нет: Tesla никогда не объявляла и не платила денежные дивиденды и не планирует в обозримом будущем.",
+  "must": [],
+  "docs": [
+    "TSLA_annual_2025-12-31"
+  ],
+  "evidence": [
+    "We have never declared or paid cash dividends"
+  ],
+  "note": "yes/no question: only the judge can score it",
+  "reviewed": true
+}
+{
+  "id": "r27",
+  "question": "Какая выручка у JPMorgan в четвёртом квартале 2026 года?",
+  "type": "no_answer",
+  "reference": "В документах этого нет: последний отчёт JPMorgan в корпусе — за 3 кв. 2026.",
+  "must": [],
+  "docs": [],
+  "evidence": [],
+  "note": "4Q26 appears only as a column of macro assumptions in the 10-K",
+  "reviewed": true
+}
+{
+  "id": "r28",
+  "question": "Какая выручка у Intel за 2025 год?",
+  "type": "no_answer",
+  "reference": "В документах этого нет: Intel упоминается только как конкурент и объект инвестиций NVIDIA.",
+  "must": [],
+  "docs": [],
+  "evidence": [],
+  "note": "Intel is named in the NVIDIA 10-K, without its revenue",
+  "reviewed": true
+}
+{
+  "id": "r29",
+  "question": "Сколько акций Tesla продал Илон Маск в 2026 году?",
+  "type": "no_answer",
+  "reference": "В документах этого нет.",
+  "must": [],
+  "docs": [],
+  "evidence": [],
+  "note": "Musk is mentioned in the Tesla 10-K, no share sales",
+  "reviewed": true
+}

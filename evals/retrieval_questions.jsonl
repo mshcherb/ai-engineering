@@ -1,0 +1,283 @@
+{
+  "id": "r01",
+  "question": "Какую выручку показал JPMorgan в третьем квартале 2026 года?",
+  "question_en": "What reported revenue did JPMorgan Chase post for the third quarter of 2026?",
+  "evidence": [
+    "Reported revenue of $50.2 billion"
+  ],
+  "docs": [
+    "JPM_earnings_2026-10-13"
+  ],
+  "type": "version_trap",
+  "note": "Q2 release says $57.3 billion",
+  "reviewed": true
+}
+{
+  "id": "r02",
+  "question": "Какая была выручка у ЖПморган чейс во втором квартале 2026 года?",
+  "question_en": "What was JPMorgan Chase's reported revenue in the second quarter of 2026?",
+  "evidence": [
+    "Reported revenue of $57.3 billion"
+  ],
+  "docs": [
+    "JPM_earnings_2026-07-14"
+  ],
+  "type": "version_trap",
+  "note": "Q3 release says $50.2 billion",
+  "reviewed": true
+}
+{
+  "id": "r03",
+  "question": "Какой был сет1 у JPMorgan на конец третьего квартала 2026 года?",
+  "question_en": "What was JPMorgan's standardized CET1 capital ratio at the end of the third quarter of 2026?",
+  "evidence": [
+    "Std. 13.9%"
+  ],
+  "docs": [
+    "JPM_earnings_2026-10-13"
+  ],
+  "type": "similar_docs",
+  "note": "every bank reports a CET1 ratio",
+  "reviewed": true
+}
+{
+  "id": "r04",
+  "question": "Сколько составила чистая выручка Голдман сакс в третьем квартале 2026 года?",
+  "question_en": "How much were Goldman Sachs net revenues in the third quarter of 2026?",
+  "evidence": [
+    "net revenues of $ 18.68 billion",
+    "Net revenues were $ 18.68 billion"
+  ],
+  "docs": [
+    "GS_earnings_2026-10-13"
+  ],
+  "type": "similar_docs",
+  "note": "GS Q2 release has its own net revenues",
+  "reviewed": true
+}
+{
+  "id": "r05",
+  "question": "Третий квартал 2026 года какая чистая прибыль у читигруп по их отчету?",
+  "question_en": "What net income did Citigroup report for the third quarter of 2026?",
+  "evidence": [
+    "net income for the third quarter 2026 of $5.2 billion",
+    "Citigroup net income was $5.2 billion"
+  ],
+  "docs": [
+    "C_earnings_2026-10-13"
+  ],
+  "type": "similar_docs",
+  "note": "five banks report net income",
+  "reviewed": true
+}
+{
+  "id": "r06",
+  "question": "Какая чистая прибыль была у Консьюмер банкинга банка BoA в 3 квартале 2026?",
+  "question_en": "What was net income of Bank of America's Consumer Banking segment in 3Q26?",
+  "evidence": [
+    "Consumer Banking • Net income of $3.5 billion"
+  ],
+  "docs": [
+    "BAC_earnings_2026-10-14"
+  ],
+  "type": "similar_docs",
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r07",
+  "question": "На сколько выросли продажи AWS по сравнению с прошлым годом в третьем квартале 26го?",
+  "question_en": "How much did AWS sales grow year over year in the third quarter of 2026?",
+  "evidence": [
+    "AWS segment sales increased 39% year-over-year to $46.0 billion"
+  ],
+  "docs": [
+    "AMZN_earnings_2026-10-29"
+  ],
+  "type": "fact",
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r08",
+  "question": "Какую выручку микрон показал за четвёртый квартал 2026 финансового года?",
+  "question_en": "What revenue did Micron report for the fourth quarter of fiscal 2026?",
+  "evidence": [
+    "Revenue of $54.23 billion"
+  ],
+  "docs": [
+    "MU_earnings_2026-09-30"
+  ],
+  "type": "fact",
+  "note": "fiscal Q4 2026 = June-August 2026 (FY ended Sept 3, 2026); full fiscal year revenue is $133.19 billion",
+  "reviewed": true
+}
+{
+  "id": "r09",
+  "question": "Какие были выручка и прибыль на акцию у Texas Instruments в третьем квартале 2026?",
+  "question_en": "What were Texas Instruments' third quarter 2026 revenue and earnings per share?",
+  "evidence": [
+    "revenue of $6.06 billion, net income of $2.43 billion and earnings per share of $2.62"
+  ],
+  "docs": [
+    "TXN_earnings_2026-10-21"
+  ],
+  "type": "fact",
+  "note": "",
+  "reviewed": true
+}
+{
+  "id": "r10",
+  "question": "Какая была выручка сегмента дата центр у нвидиа во втором квартале 2027 финансового года?",
+  "question_en": "What was NVIDIA's Data Center revenue in the second quarter of fiscal 2027?",
+  "evidence": [
+    "Data Center revenue of $89.0 billion",
+    "Second-quarter revenue was $89.0 billion"
+  ],
+  "docs": [
+    "NVDA_earnings_2026-08-26"
+  ],
+  "type": "fact",
+  "note": "fiscal Q2 2027 = May-July 2026 (NVIDIA fiscal year ends in late January)",
+  "reviewed": true
+}
+{
+  "id": "r11",
+  "question": "Во сколько NVIDIA обошлись американские ограничения на экспорт в Китай?",
+  "question_en": "How much did the U.S. export restrictions on China cost NVIDIA?",
+  "evidence": [
+    "$4.5 billion charge in the first quarter of fiscal year 2026 associated with H20"
+  ],
+  "docs": [
+    "NVDA_annual_2026-01-25"
+  ],
+  "type": "fact",
+  "note": "H20 export license requirement (April 2025); the $4.5B charge is in Item 1 and MD&A",
+  "reviewed": true
+}
+{
+  "id": "r12",
+  "question": "Какая грос маргин TSMC в третьем квартале 2026 года?",
+  "question_en": "What was TSMC's gross margin in the third quarter of 2026?",
+  "evidence": [
+    "Gross margin was 66.4%"
+  ],
+  "docs": [
+    "TSM_management_report_2026Q3",
+    "TSM_earnings_release_2026Q3"
+  ],
+  "type": "version_trap",
+  "note": "Q2 report has another margin",
+  "reviewed": true
+}
+{
+  "id": "r13",
+  "question": "Какой прогноз выручки обещает TSMC на четвёртый квартал 2026 года?",
+  "question_en": "What revenue guidance did TSMC give for the fourth quarter of 2026?",
+  "evidence": [
+    "US$52.3 billion"
+  ],
+  "docs": [
+    "TSM_earnings_release_2026Q3",
+    "TSM_presentation_2026Q3",
+    "TSM_management_report_2026Q3"
+  ],
+  "type": "fact",
+  "note": "guidance is a range: US$52.3-54.3 billion",
+  "reviewed": true
+}
+{
+  "id": "r14",
+  "question": "Какую долю выручки TSMC в третьем квартале 26-го дал сегмент HPC?",
+  "question_en": "What share of TSMC's net revenue came from HPC in the third quarter of 2026?",
+  "evidence": [
+    "HPC and Smartphone represented 68%",
+    "High Performance Computing 68%"
+  ],
+  "docs": [
+    "TSM_management_report_2026Q3",
+    "TSM_presentation_2026Q3",
+    "TSM_earnings_release_2026Q3"
+  ],
+  "type": "version_trap",
+  "note": "Q2 report says HPC 66%",
+  "reviewed": true
+}
+{
+  "id": "r15",
+  "question": "Сколько сотрудников было у JPMorgan Chase на конец 25 года?",
+  "question_en": "How many employees did JPMorgan Chase have at the end of 2025?",
+  "evidence": [
+    "318,512 employees"
+  ],
+  "docs": [
+    "JPM_annual_2025-12-31"
+  ],
+  "type": "version_trap",
+  "note": "2024 10-K says 317,233",
+  "reviewed": true
+}
+{
+  "id": "r16",
+  "question": "Что в отчете Tesla о Киберкаб за третий квартал 2026 года?",
+  "question_en": "What did Tesla's third quarter 2026 report say about Cybercab?",
+  "evidence": [
+    "started providing Robotaxi rides using Cybercabs",
+    "Launched Cybercab into the Robotaxi fleet in Austin"
+  ],
+  "docs": [
+    "TSLA_earnings_2026-10-21"
+  ],
+  "type": "narrative",
+  "note": "the word Cybercab alone is in many chunks and in the 10-K",
+  "reviewed": true
+}
+{
+  "id": "r17",
+  "question": "Сколько сделал Wells Fargo чистыми в третьем квартале 2026?",
+  "question_en": "What net income did Wells Fargo report for the third quarter of 2026?",
+  "evidence": [
+    "Net Income of $6.0 billion"
+  ],
+  "docs": [
+    "WFC_earnings_2026-10-13"
+  ],
+  "type": "similar_docs",
+  "note": "five banks report Q3 2026 net income on the same days",
+  "reviewed": true
+}
+{
+  "id": "r18",
+  "question": "Какие были продажи ASML за 2025 год?",
+  "question_en": "What were ASML's total net sales for 2025?",
+  "evidence": [
+    "€32.7bn Total net sales",
+    "to € 32.7 billion in 2025"
+  ],
+  "docs": [
+    "ASML_annual_2025-12-31"
+  ],
+  "type": "fact",
+  "note": "2024 was €28.3bn; 2026 guidance €34–39bn is in the same report",
+  "reviewed": true
+}
+{
+  "id": "r19",
+  "question": "Какую выручку Apple показал в третьем квартале 2026?",
+  "question_en": "What revenue did Apple report for the third quarter of 2026?",
+  "evidence": [],
+  "docs": [],
+  "type": "no_answer",
+  "note": "Apple is not in the corpus; 'Apple Card' appears in JPM and GS filings",
+  "reviewed": true
+}
+{
+  "id": "r20",
+  "question": "Какая выручка у ASML в третьем квартале 2026?",
+  "question_en": "What were ASML's net sales in the third quarter of 2026?",
+  "evidence": [],
+  "docs": [],
+  "type": "no_answer",
+  "note": "only the 2025 annual report of ASML is in the corpus",
+  "reviewed": true
+}

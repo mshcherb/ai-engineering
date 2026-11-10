@@ -1,0 +1,230 @@
+{
+  "id": "l01",
+  "case": "r15",
+  "made": "edited",
+  "answer": "На конец 2025 года у JPMorgan Chase было 317,233 сотрудника [S1].",
+  "found": true,
+  "cited": [
+    "JPM_annual_2025-12-31#34"
+  ],
+  "correct": false,
+  "grounded": false,
+  "note": "317,233 вместо 318,512; числа нет в источнике"
+}
+{
+  "id": "l02",
+  "case": "r10",
+  "made": "bot",
+  "answer": "Выручка сегмента Data Center во втором квартале финансового года 2027 составила $89.0 billion, что на 117% больше по сравнению с прошлым годом [S1].",
+  "found": true,
+  "cited": [
+    "NVDA_earnings_2026-08-26#0"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": ""
+}
+{
+  "id": "l03",
+  "case": "r01",
+  "made": "edited",
+  "answer": "Выручка JPMorgan в третьем квартале 2026 года составила $57.3 billion [S1].",
+  "found": true,
+  "cited": [
+    "JPM_earnings_2026-10-13#3"
+  ],
+  "correct": false,
+  "grounded": false,
+  "note": "$57.3 млрд вместо $50.2 млрд; числа нет в источнике"
+}
+{
+  "id": "l04",
+  "case": "r09",
+  "made": "edited",
+  "answer": "Выручка Texas Instruments в третьем квартале 2026 года составила $6,055 million [S1].",
+  "found": true,
+  "cited": [
+    "TXN_earnings_2026-10-21#4"
+  ],
+  "correct": false,
+  "grounded": true,
+  "note": "в вопросе спрашивали EPS, в ответе его нет"
+}
+{
+  "id": "l05",
+  "case": "r19",
+  "made": "bot",
+  "answer": "В документах этого нет.",
+  "found": false,
+  "cited": [],
+  "correct": true,
+  "grounded": null,
+  "note": "Apple нет в корпусе, отказ верный"
+}
+{
+  "id": "l06",
+  "case": "r18",
+  "made": "bot",
+  "answer": "Общие продажи ASML за 2025 год составили €32,667.3 миллиона, что на €4.4 миллиарда больше, чем в 2024 году, что соответствует росту на 15.6% [S6]. Продажи систем увеличились на €2.9 миллиарда, в то время как продажи в сегменте памяти снизились на €0.2 миллиарда [S1].",
+  "found": true,
+  "cited": [
+    "ASML_annual_2025-12-31#982",
+    "ASML_annual_2025-12-31#154"
+  ],
+  "correct": true,
+  "grounded": false,
+  "note": "+€2.9 млрд — это рост Logic, а не продаж систем (+12.4%)"
+}
+{
+  "id": "l07",
+  "case": "r17",
+  "made": "edited",
+  "answer": "Чистая прибыль Wells Fargo в третьем квартале 2026 года — около $5.95 млрд [S1].",
+  "found": true,
+  "cited": [
+    "WFC_earnings_2026-10-13#0"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": "5,951 млн ≈ $6.0 млрд, другое округление"
+}
+{
+  "id": "l08",
+  "case": "r11",
+  "made": "bot",
+  "answer": "В результате требований правительства США NVIDIA понесла убыток в размере $4,5 миллиарда в первом квартале финансового года 2026, связанный с избыточными запасами и обязательствами по закупкам, так как спрос на продукты H20 уменьшился [S3].",
+  "found": true,
+  "cited": [
+    "NVDA_annual_2026-01-25#34"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": "[S3] — нумерация контекста бота, факт есть в процитированном источнике"
+}
+{
+  "id": "l09",
+  "case": "r27",
+  "made": "edited",
+  "answer": "Выручка JPMorgan в четвёртом квартале 2026 года составила $50.2 billion [S1].",
+  "found": true,
+  "cited": [
+    "JPM_earnings_2026-10-13#3"
+  ],
+  "correct": false,
+  "grounded": false,
+  "note": "Q4 2026 нет в корпусе; $50.2 млрд — это Q3, выдано за Q4"
+}
+{
+  "id": "l10",
+  "case": "r16",
+  "made": "bot",
+  "answer": "В третьем квартале 2026 года Tesla начала предоставлять поездки на Robotaxi с использованием Киберкабов в Остине. Мы достигли почти двух миллионов накопленных несупервизируемых миль для нашего Robotaxi-сервиса на конец квартала [S4].",
+  "found": true,
+  "cited": [
+    "TSLA_earnings_2026-10-21#10"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": "deployment of Cybercab into Robotaxi fleet ≈ начало поездок"
+}
+{
+  "id": "l11",
+  "case": "r26",
+  "made": "edited",
+  "answer": "Да, Tesla выплачивает ежеквартальные дивиденды по обыкновенным акциям [S1].",
+  "found": true,
+  "cited": [
+    "TSLA_annual_2025-12-31#104"
+  ],
+  "correct": false,
+  "grounded": false,
+  "note": "источник: Tesla никогда не платила дивиденды"
+}
+{
+  "id": "l12",
+  "case": "r27",
+  "made": "bot",
+  "answer": "В документах этого нет.",
+  "found": false,
+  "cited": [],
+  "correct": true,
+  "grounded": null,
+  "note": "Q4 2026 нет в корпусе, отказ верный"
+}
+{
+  "id": "l13",
+  "case": "r09",
+  "made": "bot",
+  "answer": "Выручка составила $6,055 миллиарда [S3]. Прибыль на акцию составила $2.62 [S2].",
+  "found": true,
+  "cited": [
+    "TXN_earnings_2026-10-21#4",
+    "TXN_earnings_2026-10-21#5"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": "$6,055 млрд = 6.055 (десятичная запятая); оба числа в источнике #4, [S2]/[S3] — нумерация контекста"
+}
+{
+  "id": "l14",
+  "case": "r05",
+  "made": "bot",
+  "answer": "Чистая прибыль Citigroup составила $5.2 миллиарда в третьем квартале 2026 года, по сравнению с $3.8 миллиарда в аналогичном периоде прошлого года [S1].",
+  "found": true,
+  "cited": [
+    "C_earnings_2026-10-13#7"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": ""
+}
+{
+  "id": "l15",
+  "case": "r22",
+  "made": "edited",
+  "answer": "Валовая маржа TSMC во втором квартале 2026 года составила 67.7%; рост связан с ослаблением тайваньского доллара [S1].",
+  "found": true,
+  "cited": [
+    "TSM_management_report_2026Q2#1"
+  ],
+  "correct": true,
+  "grounded": false,
+  "note": "причина роста (тайваньский доллар) в источнике не упоминается"
+}
+{
+  "id": "l16",
+  "case": "r05",
+  "made": "edited",
+  "answer": "В документах этого нет.",
+  "found": false,
+  "cited": [],
+  "correct": false,
+  "grounded": null,
+  "note": "ложное «не знаю»: ответ $5.2 млрд есть в корпусе"
+}
+{
+  "id": "l17",
+  "case": "r12",
+  "made": "bot",
+  "answer": "Гросс маржин составила 66.4% в третьем квартале 2026 года, что на 1.3 процентных пункта ниже, чем во втором квартале 2026 года и на 6.9 процентных пункта выше, чем в третьем квартале 2025 года [S1].",
+  "found": true,
+  "cited": [
+    "TSM_management_report_2026Q3#1"
+  ],
+  "correct": true,
+  "grounded": true,
+  "note": ""
+}
+{
+  "id": "l18",
+  "case": "r07",
+  "made": "edited",
+  "answer": "Продажи AWS выросли на 39% год к году, до $46.0 billion, а операционная маржа AWS составила 40% [S1].",
+  "found": true,
+  "cited": [
+    "AMZN_earnings_2026-10-29#0"
+  ],
+  "correct": true,
+  "grounded": false,
+  "note": "операционной маржи AWS 40% в источнике нет (17.8/46.0 ≈ 38.7%)"
+}

@@ -2,7 +2,7 @@
 
 data_path: data/texts.jsonl
 results_dir: results
-prompt_version: v3          # chosen in REPORT.md; override with --prompt
+prompt_version: v3          # chosen in REPORT_hw1.md; override with --prompt
 
 # Network safety: per-request timeout and retries with exponential backoff
 timeout_s: 60
@@ -40,6 +40,11 @@ runs:
     model: openai/gpt-4o-mini
     temperature: 0.7
     top_p: 0.9
+  haiku55_t0:              # HW2 judge: another model family than the bot (gpt-4o-mini)
+    provider: openrouter
+    model: anthropic/claude-haiku-5.5
+    temperature: 0.0
+    top_p: 1.0
   llama32_3b_t0:
     provider: ollama
     model: llama3.2:3b
@@ -50,3 +55,21 @@ runs:
     model: llama3.2:3b
     temperature: 0.7
     top_p: 0.9
+
+# HW2 query rewriting (rag/rewrite.py): Russian question -> English search query + filters
+rewrite:
+  run: gpt4o_mini_t0
+  prompt_version: rewrite_v1   # v2 tried and rejected, see prompts/CHANGELOG.md
+
+# HW2 answers (rag/answer.py): retrieval + grounded answer with citations
+answer:
+  run: gpt4o_mini_t0
+  prompt_version: answer_v2
+  k: 8                    # chunks after reranking
+  context_budget: 3000    # max tokens of sources in the prompt (o200k_base, gpt-4o tokenizer)
+
+# HW2 LLM as a judge (evals/judge.py): calibrated on evals/labels.jsonl, see prompts/CHANGELOG.md
+judge:
+  run: haiku55_t0          # gpt-4o-mini agreed 0.89 / 0.93 and passed a wrong answer; haiku 1.00 / ~0.9, no false passes
+  correct_prompt: judge_correct_v1
+  grounded_prompt: judge_grounded_v1
